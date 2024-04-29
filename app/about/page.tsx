@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="relative">
-      <div className="container pb-[200px]">
+    <div className="relative" data-cursor-text="">
+      <div className="container pb-[150px]">
         <h1 className="title-lg mb-10">About me</h1>
         <div className="text-lg w-1/2 max-w-[636px]">
           <p>
@@ -21,12 +21,13 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="absolute right-0 bottom-0">
+      <div className="absolute right-0 bottom-0 w-2/3">
         <Image
           src="/images/thanassis.png"
           width={1166}
           height={866}
           alt="Thanassis Mavrakis"
+          style={{ marginLeft: "auto" }}
         />
       </div>
     </div>

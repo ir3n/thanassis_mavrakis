@@ -36,7 +36,7 @@ function RotatingText({ title }: { title: string }) {
       <text width="400">
         <textPath
           xlinkHref="#circle"
-          className="text-[1rem] tracking-[1rem] uppercase font-light"
+          className="text-[0.875rem] tracking-[1rem] uppercase font-light"
           fill="#ffffff"
         >
           {title}

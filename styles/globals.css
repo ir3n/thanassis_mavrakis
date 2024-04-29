@@ -55,24 +55,21 @@ p em {
 }
 .mf-cursor.-text:before,
 .mf-cursor.-text.-active:before {
-  transform: scale(2.1);
+  transform: scale(2.2);
   @apply opacity-100 bg-accent;
 }
 .mf-cursor.-hidden:before {
   @apply opacity-50 scale-0;
 }
-.mf-cursor-media {
-  width: 350px;
-  height: 350px;
-  margin: (-350px * 0.5) 0 0 (-350px * 0.5);
-}
-.mf-cursor-media img {
-  transform: none;
-}
 .mf-cursor-text {
-  @apply text-white p-2;
+  @apply text-white p-2 text-[1.2rem];
 }
 *[data-cursor-img],
 *[data-cursor-text] {
   cursor: none !important;
+}
+
+/* buttons */
+.ghost-cta {
+  @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
 }

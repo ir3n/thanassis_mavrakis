@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import "@/styles/globals.css";
 
 import MouseFollowerComponent from "@/components/MouseFollower";
+import Header from "@/components/Header";
+
+import "@/styles/globals.css";
 
 import { heading, body } from "@/fonts";
 
@@ -44,6 +46,7 @@ export default function RootLayout({
               alt="Splash"
             />
           </div>
+          <Header />
           <main className="relative z-1 pt-[360px]">{children}</main>
         </MouseFollowerComponent>
       </body>

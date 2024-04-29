@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import MouseFollower from "mouse-follower";
 import "mouse-follower/dist/mouse-follower.min.css";
@@ -11,6 +12,7 @@ const MouseFollowerComponent = ({
 }: {
   children: React.ReactNode;
 }) => {
+  const pathname = usePathname();
   const isDesktop = useWindowWidth() > 1024;
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const MouseFollowerComponent = ({
     return () => {
       cursor.destroy();
     };
-  }, [isDesktop]);
+  }, [pathname, isDesktop]);
 
   return <div className="mf-container">{children}</div>;
 };
