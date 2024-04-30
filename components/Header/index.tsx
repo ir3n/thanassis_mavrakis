@@ -13,7 +13,7 @@ const Header = () => {
         className={`relative mt-[30px] w-full h-full px-[40px] py-[20px]   `}
       >
         <div
-          className={`absolute top-0 left-0 w-full h-full rounded-[20px] bg-gradient-to-br from-white from-[-80%] backdrop-blur transition-all duration-700 ${
+          className={`absolute top-0 left-0 w-full h-full rounded-[20px] bg-gradient-to-br from-secondary from-[0] backdrop-blur transition-all duration-700 ${
             isTop ? "scale-x-0 opacity-0" : "scale-x-100 opacity-1"
           }`}
         ></div>

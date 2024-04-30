@@ -16,13 +16,38 @@ body {
 }
 
 /* Typography */
+.title-lg,
+.title,
+.title-sm,
+.title-xs {
+  @apply font-heading;
+}
 .title-lg {
-  @apply font-heading lg:text-[9.375rem] leading-[1.3] font-semibold;
+  @apply lg:text-[9.375rem] leading-[1.3] font-semibold;
+}
+.title {
+  @apply lg:text-[8rem] leading-[1.3] font-semibold;
+}
+.title-sm {
+  @apply lg:text-[4rem] leading-[1.3] font-semibold;
+}
+.title-xs {
+  @apply font-heading lg:text-[2rem] leading-[1.3] font-semibold;
+}
+.text-lg,
+.text,
+.text-sm {
+  @apply font-body;
 }
 .text-lg {
-  @apply font-body font-light lg:text-[1.5rem] leading-[1.4];
+  @apply font-light lg:text-[1.5rem] leading-[1.4];
 }
-
+.text {
+  @apply lg:text-[1rem] leading-[1.4];
+}
+.text-sm {
+  @apply lg:text-[1rem] leading-[1.3];
+}
 .text,
 .text-lg p {
   @apply mb-5;
@@ -72,4 +97,31 @@ p em {
 /* buttons */
 .ghost-cta {
   @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
+}
+
+.ghost-cta-circle {
+  @apply w-[12.7rem] h-[12.7rem] px-[20px] border border-solid border-white rounded-full flex items-center justify-center;
+}
+
+/* Keen slider */
+.scene {
+  width: 665px;
+  height: 460px;
+  perspective: 2557px;
+  position: relative;
+}
+.scene .carousel.keen-slider {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: absolute;
+  transform: translateZ(-735px);
+  transform-style: preserve-3d;
+}
+.carousel__cell {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 0;
 }
