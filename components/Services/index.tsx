@@ -21,7 +21,7 @@ const carousel: KeenSliderPlugin = (slider) => {
   slider.on("detailsChanged", rotate);
 };
 
-const animation = { duration: 45000, easing: (t: number) => t };
+const animation = { duration: 50000, easing: (t: number) => t };
 
 const Services = () => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
