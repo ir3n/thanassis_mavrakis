@@ -44,7 +44,7 @@ const Services = () => {
   );
 
   return (
-    <div className="container py-[100px]">
+    <div className="container pt-[100px] pb-[250px]">
       <h2 className="title mb-[100px]">Services</h2>
       <div className="flex justify-center">
         <div className="scene">

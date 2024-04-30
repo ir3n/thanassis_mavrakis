@@ -5,6 +5,8 @@ import RotatingTextIcon from "@/components/RotatingTextIcon";
 import ProjectTeaser from "@/components/ProjectTeaser";
 
 import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import Copyrights from "@/components/Copyrights";
 
 export default function Home() {
   return (
@@ -45,6 +47,10 @@ export default function Home() {
       <section>
         <Services />
       </section>
+      <footer>
+        <Contact />
+        <Copyrights />
+      </footer>
     </>
   );
 }

@@ -10,9 +10,46 @@ body {
 body {
   @apply text-white;
 }
-
 .container {
   @apply px-[20px] lg:max-w-[1680px] lg:px-[40px] mx-auto;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 6px;
+  @apply bg-dark;
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 6px;
+  @apply bg-accent;
+}
+
+/* cursor */
+.mf-cursor:before {
+  @apply bg-accent scale-50;
+}
+.mf-cursor.-pointer:before {
+  @apply opacity-50 scale-0;
+}
+.mf-cursor.-text:before,
+.mf-cursor.-text.-active:before {
+  transform: scale(2.2);
+  @apply opacity-100 bg-accent;
+}
+.mf-cursor.-hidden:before {
+  @apply opacity-50 scale-0;
+}
+.mf-cursor-text {
+  @apply text-white p-2 text-[1.2rem];
+}
+*[data-cursor-img],
+*[data-cursor-text] {
+  cursor: none !important;
 }
 
 /* Typography */
@@ -56,49 +93,10 @@ p em {
   @apply text-accent not-italic;
 }
 
-/* Scrollbar */
-*::-webkit-scrollbar {
-  width: 6px;
-}
-
-*::-webkit-scrollbar-track {
-  width: 6px;
-  @apply bg-dark;
-}
-
-*::-webkit-scrollbar-thumb {
-  width: 6px;
-  @apply bg-accent;
-}
-
-/* cursor */
-.mf-cursor:before {
-  @apply bg-accent scale-50;
-}
-.mf-cursor.-pointer:before {
-  @apply opacity-50 scale-0;
-}
-.mf-cursor.-text:before,
-.mf-cursor.-text.-active:before {
-  transform: scale(2.2);
-  @apply opacity-100 bg-accent;
-}
-.mf-cursor.-hidden:before {
-  @apply opacity-50 scale-0;
-}
-.mf-cursor-text {
-  @apply text-white p-2 text-[1.2rem];
-}
-*[data-cursor-img],
-*[data-cursor-text] {
-  cursor: none !important;
-}
-
 /* buttons */
 .ghost-cta {
   @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
 }
-
 .ghost-cta-circle {
   @apply w-[12.7rem] h-[12.7rem] px-[20px] border border-solid border-white rounded-full flex items-center justify-center;
 }
