@@ -1,8 +1,9 @@
+import Marquee from "@/components/Marquee";
 import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="relative" data-cursor-text="">
+    <div className="relative">
       <div className="container pb-[150px]">
         <h1 className="title-lg mb-10">About me</h1>
         <div className="text-lg w-1/2 max-w-[636px]">
@@ -30,6 +31,7 @@ const About = () => {
           style={{ marginLeft: "auto" }}
         />
       </div>
+      <Marquee />
     </div>
   );
 };

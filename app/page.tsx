@@ -38,7 +38,7 @@ export default function Home() {
             All projects
           </Link>
         </div>
-        <div className="flex gap-[50px]">
+        <div className="flex gap-[50px] justify-between">
           <ProjectTeaser />
           <ProjectTeaser />
           <ProjectTeaser />
