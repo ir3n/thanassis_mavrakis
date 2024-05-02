@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Reeller from "reeller";
+import { Reeller, ScrollerPlugin } from "reeller";
 import gsap from "gsap";
 
 const text = ["Thanassis Mavrakis", "UI/UX Designer", "No code Developer"];
@@ -9,12 +9,20 @@ const text = ["Thanassis Mavrakis", "UI/UX Designer", "No code Developer"];
 const Marquee = () => {
   useEffect(() => {
     Reeller.registerGSAP(gsap);
+    Reeller.use(ScrollerPlugin);
 
     const reeler = new Reeller({
       container: ".reel",
       wrapper: ".reel-wrap",
       itemSelector: ".reel-item",
       speed: 20,
+      plugins: {
+        scroller: {
+          speed: 1,
+          multiplier: 0.5,
+          threshold: 1,
+        },
+      },
     });
 
     return () => {
