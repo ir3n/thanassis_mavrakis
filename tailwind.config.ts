@@ -12,6 +12,7 @@ const config: Config = {
       md: "768px",
       lg: "1025px",
       xl: "1600px",
+      xxl: "1950px",
     },
     colors: {
       dark: "#222222",

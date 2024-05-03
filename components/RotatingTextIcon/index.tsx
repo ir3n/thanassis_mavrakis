@@ -21,11 +21,11 @@ function RotatingTextIcon({
       <div
         className={`${
           hover ? "opacity-100 scale-100" : "opacity-0 scale-50"
-        } hidden lg:block transition-all duration-500 `}
+        } transition-all duration-500 `}
       >
         <RotatingText title={name} />
       </div>
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="lg:absolute lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%]">
         {children}
       </div>
     </div>
