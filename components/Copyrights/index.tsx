@@ -7,7 +7,7 @@ const Copyrights = () => {
       <p className="">
         Designed by Thanassis Mavrakis. Coded by{" "}
         <Link
-          href="https://www.ireneborada.com/"
+          href="https://www.ireneborada.com"
           target="_blank"
           className="hover:text-accent transition duration-500"
         >

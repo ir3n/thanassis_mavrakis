@@ -1,5 +1,7 @@
+import FreeTimeGrid from "@/components/FreeTimeGrid";
 import Marquee from "@/components/Marquee";
 import Services from "@/components/Services";
+import TableWithLogos from "@/components/TableWithLogos";
 import Image from "next/image";
 
 const About = () => {
@@ -39,6 +41,12 @@ const About = () => {
       </section>
       <section>
         <Services />
+      </section>
+      <section className="pb-[150px]">
+        <TableWithLogos />
+      </section>
+      <section className="pt-[100px] pb-[250px]">
+        <FreeTimeGrid />
       </section>
     </>
   );

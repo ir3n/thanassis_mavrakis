@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import MouseFollowerComponent from "@/components/MouseFollower";
 import Header from "@/components/Header";
+import Contact from "@/components/Contact";
+import Copyrights from "@/components/Copyrights";
 
 import "@/styles/globals.css";
 
@@ -48,6 +50,10 @@ export default function RootLayout({
           </div>
           <Header />
           <main className="relative z-1 pt-[360px]">{children}</main>
+          <footer className="relative z-1">
+            <Contact />
+            <Copyrights />
+          </footer>
         </MouseFollowerComponent>
       </body>
     </html>
