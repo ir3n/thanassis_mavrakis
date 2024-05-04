@@ -20,7 +20,11 @@ const IntroBanner = ({
   linkText,
 }: IntroData) => {
   return (
-    <div className=" relative">
+    <div
+      className={`relative ${
+        image ? "flex flex-col-reverse lg:block" : "block"
+      }`}
+    >
       <Link
         href={link || "#"}
         className="pointer-events-none lg:pointer-events-auto"
@@ -28,7 +32,7 @@ const IntroBanner = ({
         <div
           data-cursor-text={linkText || ""}
           className={`pb-[35px] lg:pb-[100px] ${
-            image && "w-1/2 max-w-[636px]"
+            image && "lg:w-1/2 lg:max-w-[636px]"
           }`}
         >
           <h1 className="title-lg mb-[30px]">{title}</h1>
@@ -45,7 +49,7 @@ const IntroBanner = ({
       ) : null}
 
       {image ? (
-        <div className="absolute right-[50px] bottom-[-20px] w-5/12">
+        <div className="my-[-50px] lg:my-0 lg:absolute lg:right-[50px] lg:bottom-[-20px] lg:w-5/12 max-w-[245px] lg:max-w-full">
           <Image
             src={image}
             width={675}
