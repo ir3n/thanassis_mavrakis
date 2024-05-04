@@ -40,7 +40,7 @@ export default function RootLayout({
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
-          <div className="absolute top-0 right-0 w-1/3">
+          <div className="absolute top-0 right-0 w-3/5 md:w-1/2 lg:w-1/3">
             <Image
               src="/images/splash.svg"
               width={690}

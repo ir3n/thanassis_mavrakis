@@ -28,7 +28,7 @@ const IntroBanner = ({
           data-cursor-text={linkText || ""}
           className={`pb-[100px] ${image && "w-1/2 max-w-[636px]"}`}
         >
-          <h1 className="title-lg mb-[10px]">{title}</h1>
+          <h1 className="title-lg mb-[30px]">{title}</h1>
           <div
             className="text-lg max-w-[635px]"
             dangerouslySetInnerHTML={{ __html: text }}

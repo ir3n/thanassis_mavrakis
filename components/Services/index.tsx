@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <div className="container pt-[100px] pb-[250px]">
       <h2 className="title mb-[100px]">Services</h2>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <div className="scene">
           <div
             className="carousel keen-slider"
@@ -70,7 +70,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
