@@ -15,7 +15,7 @@ body {
 }
 
 .full-height-section {
-  @apply min-h-screen flex flex-col justify-center pt-[200px] lg:pt-[250px];
+  @apply min-h-screen flex flex-col justify-center pt-[150px] md:pt-[200px] lg:pt-[250px];
 }
 
 /* Scrollbar */
@@ -100,9 +100,6 @@ p em {
 /* buttons */
 .ghost-cta {
   @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
-}
-.ghost-cta-circle {
-  @apply w-[12.7rem] h-[12.7rem] px-[20px] border border-solid border-white rounded-full flex items-center justify-center;
 }
 
 /* Keen slider */

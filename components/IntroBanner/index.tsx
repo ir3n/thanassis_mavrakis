@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CircleButton from "../CircleButton";
 
 interface IntroData {
   title: string;
@@ -26,7 +27,9 @@ const IntroBanner = ({
       >
         <div
           data-cursor-text={linkText || ""}
-          className={`pb-[100px] ${image && "w-1/2 max-w-[636px]"}`}
+          className={`pb-[35px] lg:pb-[100px] ${
+            image && "w-1/2 max-w-[636px]"
+          }`}
         >
           <h1 className="title-lg mb-[30px]">{title}</h1>
           <div
@@ -35,6 +38,11 @@ const IntroBanner = ({
           ></div>
         </div>
       </Link>
+      {link ? (
+        <div className="lg:hidden">
+          <CircleButton text={linkText} url={link} />
+        </div>
+      ) : null}
 
       {image ? (
         <div className="absolute right-[50px] bottom-[-20px] w-5/12">

@@ -6,6 +6,7 @@ import RotatingTextIcon from "@/components/RotatingTextIcon";
 import ProjectTeaser from "@/components/ProjectTeaser";
 
 import Services from "@/components/Services";
+import CircleButton from "@/components/CircleButton";
 
 const homeIntro = {
   title: "UI/UX Designer",
@@ -38,9 +39,7 @@ export default function Home() {
       <section id="projects" className="container pt-[150px] pb-[100px]">
         <div className="flex items-center justify-between mb-[72px]">
           <h2 className="title">Projects</h2>
-          <Link href="/projects" className="text-lg ghost-cta-circle">
-            All projects
-          </Link>
+          <CircleButton text="All projects" url="/projects" />
         </div>
         <div className="flex gap-[50px] justify-between">
           <ProjectTeaser />
