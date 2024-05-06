@@ -36,18 +36,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="container pt-[150px] pb-[100px]">
-        <div className="flex items-center justify-between mb-[72px]">
+      <section
+        id="projects"
+        className="container pt-[70px] lg:pt-[150px] pb-[100px] relative"
+      >
+        <div className="flex items-center justify-between mb-[50px] md:mb-[72px] ">
           <h2 className="title">Projects</h2>
-          <CircleButton text="All projects" url="/projects" />
+          <div className="absolute left-0 md:left-auto right-0 md:right-auto bottom-0 md:bottom-auto mx-auto md:mx-0 md:relative w-fit">
+            <CircleButton text="All projects" url="/projects" />
+          </div>
         </div>
-        <div className="flex gap-[50px] justify-between">
+        <div className="md:flex gap-[50px] justify-between">
           <ProjectTeaser />
           <ProjectTeaser />
           <ProjectTeaser />
         </div>
       </section>
-      <section>
+      <section className="container pt-[40px] lg:pt-[100px] pb-[250px]">
         <Services />
       </section>
     </>
