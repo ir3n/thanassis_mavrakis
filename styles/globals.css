@@ -35,15 +35,14 @@ body {
 
 /* cursor */
 .mf-cursor:before {
-  @apply bg-accent scale-50;
+  @apply bg-accent scale-[0.55];
 }
 .mf-cursor.-pointer:before {
   @apply opacity-50 scale-0;
 }
 .mf-cursor.-text:before,
 .mf-cursor.-text.-active:before {
-  transform: scale(2.2);
-  @apply opacity-100 bg-accent;
+  @apply opacity-100 bg-accent scale-[2.2];
 }
 .mf-cursor.-hidden:before {
   @apply opacity-50 scale-0;

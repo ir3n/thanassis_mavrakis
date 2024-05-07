@@ -30,7 +30,7 @@ const data = {
 const Services = () => {
   const { title, services } = data;
 
-  const animation = { duration: 20000, easing: (t: number) => t };
+  const animation = { duration: 30000, easing: (t: number) => t };
 
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -62,7 +62,7 @@ const Services = () => {
       <div
         className="keen-slider items-stretch"
         ref={sliderRef}
-        data-cursor-text="drag"
+        data-cursor-text="Drag"
       >
         {services?.map((item, i) => (
           <div

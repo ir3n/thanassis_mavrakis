@@ -19,6 +19,7 @@ const config: Config = {
       accent: "#33BDB0",
       secondary: "#14413D",
       white: "#FFFFFF",
+      light: "#696969",
     },
     fontFamily: {
       heading: ["var(--heading)"],

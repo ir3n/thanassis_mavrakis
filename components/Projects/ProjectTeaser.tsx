@@ -22,7 +22,7 @@ const ProjectTeaser = ({
   const [hover, setHover] = useState(false);
   return (
     <div className="max-w-[450px] mx-auto mb-[60px] md:mb-0 flex-1">
-      <Link href={link} data-cursor-text="view">
+      <Link href={link} data-cursor-text="View">
         <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}

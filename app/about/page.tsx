@@ -29,10 +29,10 @@ const About = () => {
       <section>
         <Services />
       </section>
-      <section className="pb-[150px]">
+      <section className="pb-[40px] lg:pb-[150px]">
         <TableWithLogos />
       </section>
-      <section className="pt-[100px] pb-[250px]">
+      <section className="pt-[40px] lg:pt-[100px] pb-[80px] md:pb-[150px] xl:pb-[250px]">
         <FreeTimeGrid />
       </section>
     </>

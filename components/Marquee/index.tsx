@@ -31,15 +31,15 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className="reel overflow-hidden">
+    <div className="reel overflow-hidden pb-[10px] lg:pb-[150px]">
       <div className="reel-wrap flex width-fit">
         {text?.map((el, i) => (
           <div key={`reel-item-${i}`} className="reel-item">
             <div className="flex items-center w-fit">
-              <span className="bg-accent rounded-full w-[1.6875rem] h-[1.6875rem] inline-block mt-3 flex-shrink-0 mx-[40px]"></span>
+              <span className="bg-accent rounded-full w-4 lg:w-[1.5rem] h-4 lg:h-[1.5rem] inline-block mt-3 lg:mt-4 flex-shrink-0 mx-[20px] lg:mx-[40px]"></span>
               <h2
                 key={`marquee-${i}`}
-                className="font-heading text-[6rem] leading-[1.2] whitespace-nowrap"
+                className="font-heading text-[2.5rem] md:text-[4rem] xl:text-[6rem] leading-[1.2] whitespace-nowrap"
               >
                 {el}
               </h2>
