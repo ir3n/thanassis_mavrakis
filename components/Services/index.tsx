@@ -57,7 +57,7 @@ const Services = () => {
   });
 
   return (
-    <>
+    <div className="pt-[40px] xl:pt-[100px] pb-[80px] lg:pb-[150px] xl:pb-[250px]">
       <h2 className="container title mb-[40px] lg:mb-[100px]">{title}</h2>
       <div
         className="keen-slider items-stretch"
@@ -73,7 +73,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

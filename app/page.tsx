@@ -41,7 +41,7 @@ export default function Home() {
       >
         <Projects />
       </section>
-      <section className="pt-[40px] xl:pt-[100px] pb-[80px] lg:pb-[150px] xl:pb-[250px]">
+      <section>
         <Services />
       </section>
     </>
