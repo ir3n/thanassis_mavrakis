@@ -1,16 +1,14 @@
-const ServiceItem = () => {
+interface ServiceItem {
+  title: string;
+  text: string;
+}
+
+const ServiceItem = ({ title, text }: ServiceItem) => {
   return (
-    <div className="relative rounded-[20px] overflow-hidden  p-[60px] w-[645px] shadow-lg">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white from-[-150%] to-dark"></div>
-      <h3 className="min-h-[10.375rem] title-sm mb-[45px] relative z-1">
-        Interactive Prototyping
-      </h3>
-      <p className="text relative z-1">
-        Offering interactive prototyping services to create functional models of
-        your website or app. It's like a test-drive for your digital product,
-        allowing users to click and interact, ensuring it meets your needs and
-        delights your audience.
-      </p>
+    <div className="relative rounded-[14px] lg:rounded-[20px] overflow-hidden p-[20px] md:p-[40px] lg:p-[60px] shadow-lg h-full flex flex-col">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white from-[-200%] backdrop-blur"></div>
+      <h3 className="title-sm mb-[40px] lg:mb-[45px] relative z-1">{title}</h3>
+      <p className="text relative z-1 mt-auto">{text}</p>
     </div>
   );
 };

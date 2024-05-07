@@ -37,11 +37,11 @@ export default function Home() {
 
       <section
         id="projects"
-        className="container pt-[70px] lg:pt-[150px] pb-[100px] relative"
+        className="container pt-[70px] xl:pt-[150px] pb-[100px] relative"
       >
         <Projects />
       </section>
-      <section className="container pt-[40px] lg:pt-[100px] pb-[250px]">
+      <section className="pt-[40px] xl:pt-[100px] pb-[80px] lg:pb-[150px] xl:pb-[250px]">
         <Services />
       </section>
     </>

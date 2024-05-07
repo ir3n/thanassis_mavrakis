@@ -67,10 +67,10 @@ body {
   @apply text-[4rem] lg:text-[7rem] xl:text-[9.375rem] leading-[1.1] lg:leading-[1.3] font-semibold;
 }
 .title {
-  @apply text-[3.375rem] lg:text-[8rem] leading-[1.3] font-semibold;
+  @apply text-[3.375rem] lg:text-[5.5rem] xl:text-[8rem] leading-[1.3] font-semibold;
 }
 .title-sm {
-  @apply lg:text-[4rem] leading-[1.3] font-semibold;
+  @apply text-[1.75rem] lg:text-[4rem] leading-[1.2] font-semibold;
 }
 .title-xs {
   @apply font-heading text-[1.625rem] lg:text-[2rem]  leading-[1.2] lg:leading-[1.3] font-semibold;
@@ -100,27 +100,4 @@ p em {
 /* buttons */
 .ghost-cta {
   @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
-}
-
-/* Keen slider */
-.scene {
-  width: 665px;
-  height: 460px;
-  perspective: 2557px;
-  position: relative;
-}
-.scene .carousel.keen-slider {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  position: absolute;
-  transform: translateZ(-735px);
-  transform-style: preserve-3d;
-}
-.carousel__cell {
-  position: absolute;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  left: 0;
 }

@@ -5,72 +5,74 @@ import "keen-slider/keen-slider.min.css";
 
 import ServiceItem from "./ServiceItem";
 
-const carousel: KeenSliderPlugin = (slider) => {
-  const z = 600;
-  function rotate() {
-    const deg = 360 * slider.track.details.progress;
-    slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`;
-  }
-  slider.on("created", () => {
-    const deg = 360 / slider.slides.length;
-    slider.slides.forEach((element, idx) => {
-      element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
-    });
-    rotate();
-  });
-  slider.on("detailsChanged", rotate);
+const data = {
+  title: "Services",
+  services: [
+    {
+      title: "UI/UX Design",
+      text: "I specialize in designing websites and apps to be easy to use and look great. Whether you're starting from scratch or want to improve what you already have, I'll make sure your digital stuff is top-notch and user-friendly.",
+    },
+    {
+      title: "Interactive Prototyping",
+      text: "Offering interactive prototyping services to create functional models of your website or app. It's like a test-drive for your digital product, allowing users to click and interact, ensuring it meets your needs and delights your audience.",
+    },
+    {
+      title: "Branding",
+      text: "Providing branding services to give your business a unique identity. From logos to color schemes, I'll help you stand out in the crowd and make a lasting impression on your audience.",
+    },
+    {
+      title: "No Code Development",
+      text: "Offering no-code development services using tools like Webflow, Framer, and Wix. This means faster, more cost-effective solutions for your website or app projects.",
+    },
+  ],
 };
 
-const animation = { duration: 50000, easing: (t: number) => t };
-
 const Services = () => {
-  const [sliderRef] = useKeenSlider<HTMLDivElement>(
-    {
-      loop: true,
-      selector: ".carousel__cell",
-      renderMode: "custom",
-      mode: "free-snap",
-      created(s) {
-        s.moveToIdx(5, true, animation);
-      },
-      updated(s) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation);
-      },
-      animationEnded(s) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation);
+  const { title, services } = data;
+
+  const animation = { duration: 20000, easing: (t: number) => t };
+
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    mode: "free",
+    renderMode: "performance",
+    slides: {
+      perView: "auto",
+      spacing: 20,
+    },
+    breakpoints: {
+      "(min-width: 1025px)": {
+        slides: { perView: "auto", spacing: 40 },
       },
     },
-    [carousel]
-  );
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+  });
 
   return (
     <>
-      <h2 className="title mb-[100px]">Services</h2>
-      {/* <div className="flex justify-center">
-        <div className="scene">
+      <h2 className="container title mb-[40px] lg:mb-[100px]">{title}</h2>
+      <div
+        className="keen-slider items-stretch"
+        ref={sliderRef}
+        data-cursor-text="drag"
+      >
+        {services?.map((item, i) => (
           <div
-            className="carousel keen-slider"
-            ref={sliderRef}
-            data-cursor-text="drag"
+            key={`service-item-${i}`}
+            className="keen-slider__slide shrink-0 max-w-[17rem] md:max-w-[30rem] lg:max-w-[40rem] h-auto"
           >
-            <div className="carousel__cell number-slide1">
-              <ServiceItem />
-            </div>
-            <div className="carousel__cell number-slide2">
-              <ServiceItem />
-            </div>
-            <div className="carousel__cell number-slide3">
-              <ServiceItem />
-            </div>
-            <div className="carousel__cell number-slide4">
-              <ServiceItem />
-            </div>
-            <div className="carousel__cell number-slide5">
-              <ServiceItem />
-            </div>
+            <ServiceItem title={item?.title} text={item?.text} />
           </div>
-        </div>
-      </div> */}
+        ))}
+      </div>
     </>
   );
 };
