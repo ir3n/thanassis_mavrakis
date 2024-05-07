@@ -4,11 +4,25 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectTeaser = () => {
+interface ProjTeaser {
+  link: string;
+  imageSrc: string;
+  imageAlt: string;
+  subtitle: string;
+  title: string;
+}
+
+const ProjectTeaser = ({
+  link,
+  imageSrc,
+  imageAlt,
+  subtitle,
+  title,
+}: ProjTeaser) => {
   const [hover, setHover] = useState(false);
   return (
     <div className="max-w-[450px] mx-auto mb-[60px] md:mb-0 flex-1">
-      <Link href={"/"} data-cursor-text="view">
+      <Link href={link} data-cursor-text="view">
         <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
@@ -25,12 +39,7 @@ const ProjectTeaser = () => {
                 hover ? "lg:rotate-0" : "lg:rotate-[7deg]"
               }`}
             >
-              <Image
-                src={"/images/projects/retool-teaser.png"}
-                width={452}
-                height={478}
-                alt={"Retool Website"}
-              />
+              <Image src={imageSrc} width={452} height={478} alt={imageAlt} />
             </div>
           </div>
           <div
@@ -40,7 +49,7 @@ const ProjectTeaser = () => {
                 : "lg:translate-y-[-50%] lg:opacity-0"
             }`}
           >
-            #UI/UX Design
+            {subtitle}
           </div>
           <h3
             className={`title-xs transition duration-500 delay-100 ${
@@ -49,7 +58,7 @@ const ProjectTeaser = () => {
                 : "lg:translate-y-[-50%] lg:opacity-0"
             }`}
           >
-            Retool website design
+            {title}
           </h3>
         </div>
       </Link>

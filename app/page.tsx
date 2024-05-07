@@ -3,10 +3,9 @@ import Link from "next/link";
 import IntroBanner from "@/components/IntroBanner";
 import { ArrowDown } from "lucide-react";
 import RotatingTextIcon from "@/components/RotatingTextIcon";
-import ProjectTeaser from "@/components/ProjectTeaser";
+import Projects from "@/components/Projects";
 
 import Services from "@/components/Services";
-import CircleButton from "@/components/CircleButton";
 
 const homeIntro = {
   title: "UI/UX Designer",
@@ -40,17 +39,7 @@ export default function Home() {
         id="projects"
         className="container pt-[70px] lg:pt-[150px] pb-[100px] relative"
       >
-        <div className="flex items-center justify-between mb-[50px] md:mb-[72px] ">
-          <h2 className="title">Projects</h2>
-          <div className="absolute left-0 md:left-auto right-0 md:right-auto bottom-0 md:bottom-auto mx-auto md:mx-0 md:relative w-fit">
-            <CircleButton text="All projects" url="/projects" />
-          </div>
-        </div>
-        <div className="md:flex gap-[50px] justify-between">
-          <ProjectTeaser />
-          <ProjectTeaser />
-          <ProjectTeaser />
-        </div>
+        <Projects />
       </section>
       <section className="container pt-[40px] lg:pt-[100px] pb-[250px]">
         <Services />
