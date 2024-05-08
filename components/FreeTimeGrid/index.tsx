@@ -47,7 +47,7 @@ const FreeTimeGrid = () => {
         {data?.images?.map((el, i) => (
           <div
             key={`grid-images-${i}`}
-            className={`rounded-[14px] md:rounded-[20px] overflow-hidden ${
+            className={`rounded ${
               i === 0
                 ? "col-span-2 h-[220px] md:h-[25rem] lg:h-[30rem] xl:h-[36rem]"
                 : "col-span-1 h-[220px] md:h-[15rem] lg:h-[27rem]"
