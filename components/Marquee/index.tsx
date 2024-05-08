@@ -16,6 +16,7 @@ const Marquee = () => {
       wrapper: ".reel-wrap",
       itemSelector: ".reel-item",
       speed: 20,
+      paused: false,
       plugins: {
         scroller: {
           speed: 1,

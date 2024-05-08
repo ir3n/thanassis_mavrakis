@@ -21,7 +21,7 @@ const ProjectTeaser = ({
 }: ProjTeaser) => {
   const [hover, setHover] = useState(false);
   return (
-    <div className="max-w-[450px] mx-auto mb-[60px] md:mb-0 flex-1">
+    <div className="max-w-[660px] mx-auto mb-[60px] md:mb-0 flex-1">
       <Link href={link} data-cursor-text="View">
         <div
           onMouseEnter={() => setHover(true)}
@@ -39,7 +39,7 @@ const ProjectTeaser = ({
                 hover ? "lg:rotate-0" : "lg:rotate-[7deg]"
               }`}
             >
-              <Image src={imageSrc} width={452} height={478} alt={imageAlt} />
+              <Image src={imageSrc} width={660} height={698} alt={imageAlt} />
             </div>
           </div>
           <div

@@ -11,7 +11,7 @@ const aboutIntro = {
   imageAlt: "Thanassis Mavrakis Portrait",
 };
 
-const About = () => {
+export default function About() {
   const { title, text, image, imageAlt } = aboutIntro;
   return (
     <>
@@ -37,6 +37,4 @@ const About = () => {
       </section>
     </>
   );
-};
-
-export default About;
+}
