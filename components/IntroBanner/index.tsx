@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CircleButton from "../CircleButton";
+import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
 
 interface IntroData {
   title: string;
@@ -25,12 +26,8 @@ const IntroBanner = ({
         image ? "flex flex-col-reverse lg:block" : "block"
       }`}
     >
-      <Link
-        href={link || "#"}
-        className="pointer-events-none lg:pointer-events-auto"
-      >
+      <LinkDesktopNolinkMobile url={link} text={linkText || ""}>
         <div
-          data-cursor-text={linkText || ""}
           className={`pb-[35px] lg:pb-[100px] ${
             image && "lg:w-1/2 lg:max-w-[636px]"
           }`}
@@ -41,7 +38,7 @@ const IntroBanner = ({
             dangerouslySetInnerHTML={{ __html: text }}
           ></div>
         </div>
-      </Link>
+      </LinkDesktopNolinkMobile>
       {link ? (
         <div className="lg:hidden">
           <CircleButton text={linkText} url={link} />
