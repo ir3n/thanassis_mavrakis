@@ -1,55 +1,19 @@
+"use client";
+
 import CircleButton from "@/components/CircleButton";
 import LinkDesktopNolinkMobile from "@/components/LinkDesktopNolinkMobile";
 import Image from "next/image";
-import Link from "next/link";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-const data = {
-  id: "papaioannou",
-  title: "P & A Papaioannou O.E",
-  date: "February 2023",
-  services: ["#UI/UX design ", "#Web design"],
-  banner: "/images/projects/papaioannou/banner.png",
-  link: "/",
-  text: "<p>P & A Papaioannou O.E. is a car service company that approached me to redesign their website with a more professional and modern look.</p><p>After conducting extensive research into the car service field and their target audience, I developed a fresh and modern design that perfectly fits their brand image.</p><p> The new design effectively showcases their services and provides an exceptional user experience, helping them stand out in their industry.</p>",
-  halfImage: {
-    src: "/images/projects/papaioannou/banner.png",
-    alt: "Desktop hero banner",
-  },
-  twoImages: [
-    {
-      src: "/images/projects/papaioannou/banner.png",
-      alt: "Services",
-    },
-    {
-      src: "/images/projects/papaioannou/banner.png",
-      alt: "Contact",
-    },
-  ],
-  threeImages: [
-    {
-      src: "/images/projects/papaioannou/banner.png",
-      alt: "Mobile hero banner",
-    },
-    {
-      src: "/images/projects/papaioannou/banner.png",
-      alt: "Mobile services",
-    },
-    {
-      src: "/images/projects/papaioannou/banner.png",
-      alt: "Mobile menu",
-    },
-  ],
-  nextProject: {
-    title: "Retool website design",
-    id: "retool",
-    image: {
-      src: "/images/projects/retool-teaser.png",
-      alt: "Retool",
-    },
-  },
-};
+import allProjects from "@/data/fullProjects.json";
+import projectTeasers from "@/data/projectListing.json";
 
 export default function Page({ params }: { params: { slug: string } }) {
+  const data = allProjects?.find((proj) => proj.id === params?.slug);
+  const next = projectTeasers?.projects?.find(
+    (proj) => proj.id === data?.nextProject
+  );
+
   const {
     title,
     date,
@@ -62,6 +26,8 @@ export default function Page({ params }: { params: { slug: string } }) {
     threeImages,
     nextProject,
   } = data;
+
+  const desk = useWindowWidth() > 1024;
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
@@ -91,10 +57,15 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div>
                   ))}
                 </div>
-
-                <div className="lg:hidden w-fit ml-4 md:ml-0 md:mt-8">
-                  <CircleButton text={"Visit site"} url={link} filled={true} />
-                </div>
+                {!desk && (
+                  <div className="w-fit ml-4 md:ml-0 md:mt-8">
+                    <CircleButton
+                      text={"Visit site"}
+                      url={link}
+                      filled={true}
+                    />
+                  </div>
+                )}
               </div>
             </div>
             <div className="rounded md:w-2/3">
@@ -153,38 +124,42 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
       </section>
       <section>
-        <LinkDesktopNolinkMobile
-          url={`/projects/${nextProject?.id}`}
-          text="View project"
-        >
-          <div className="md:flex md:gap-[20px] lg:gap-[40px] max-w-[500px] mx-auto md:max-w-full">
-            <div className="md:w-2/3 rounded relative flex flex-col items-center justify-center px-[20px] pt-[40px] pb-[20px] md:p-[40px] mb-[20px] md:mb-0">
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white from-[-100%] opacity-50"></div>
-              <div className="max-w-[933px] w-full font-heading">
-                <h3 className="text-[1.25rem] lg:text-[3rem]">Next Project</h3>
-                <h4 className="project-title mb-4 lg:mb-0">
-                  {nextProject?.title}
-                </h4>
-                <div className="lg:hidden w-fit ml-auto md:ml-0">
-                  <CircleButton
-                    text="View project"
-                    url={`/projects/${nextProject?.id}`}
-                    filled={true}
-                  />
+        {nextProject && (
+          <LinkDesktopNolinkMobile
+            url={`/projects/${nextProject?.id}`}
+            text="View project"
+          >
+            <div className="md:flex md:gap-[20px] lg:gap-[40px] max-w-[500px] mx-auto md:max-w-full">
+              <div className="md:w-2/3 rounded relative flex flex-col items-center justify-center px-[20px] pt-[40px] pb-[20px] md:p-[40px] mb-[20px] md:mb-0">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white from-[-100%] opacity-50"></div>
+                <div className="max-w-[933px] w-full font-heading">
+                  <h3 className="text-[1.25rem] lg:text-[3rem]">
+                    Next Project
+                  </h3>
+                  <h4 className="project-title mb-4 lg:mb-0">{next?.title}</h4>
+                  {!desk && (
+                    <div className="w-fit ml-auto md:ml-0">
+                      <CircleButton
+                        text="View project"
+                        url={`/projects/${next?.id}`}
+                        filled={true}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
+              <div className="md:w-1/3 rounded">
+                <Image
+                  src={next?.image?.src || ""}
+                  width={507}
+                  height={536}
+                  alt={next?.image?.alt || ""}
+                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                />
+              </div>
             </div>
-            <div className="md:w-1/3 rounded">
-              <Image
-                src={nextProject?.image?.src}
-                width={507}
-                height={536}
-                alt={nextProject?.image?.alt}
-                style={{ width: "100%", height: "100%", objectFit: "fill" }}
-              />
-            </div>
-          </div>
-        </LinkDesktopNolinkMobile>
+          </LinkDesktopNolinkMobile>
+        )}
       </section>
     </div>
   );

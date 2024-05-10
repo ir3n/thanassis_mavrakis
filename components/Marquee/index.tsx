@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { Reeller, ScrollerPlugin } from "reeller";
 import gsap from "gsap";
 
-const text = ["Thanassis Mavrakis", "UI/UX Designer", "No code Developer"];
+type Marquee = string[];
 
-const Marquee = () => {
+const Marquee = ({ text }: { text: Marquee }) => {
   useEffect(() => {
     Reeller.registerGSAP(gsap);
     Reeller.use(ScrollerPlugin);

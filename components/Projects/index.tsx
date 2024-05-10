@@ -1,45 +1,16 @@
 import ProjectTeaser from "./ProjectTeaser";
 import CircleButton from "../CircleButton";
 
-const data = {
-  title: "Projects",
-  button: {
-    text: "All projects",
-    url: "/projects",
-  },
-  projects: [
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "Retool Website",
-      },
-      subtitle: "#UI/UX Design",
-      title: "Retool website design",
-    },
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "P&A Papaioannou O.E.",
-      },
-      subtitle: "#UI/UX design, #Web design",
-      title: "P&A Papaioannou O.E. website design & development",
-    },
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "Retool Website",
-      },
-      subtitle: "#UI/UX Design",
-      title: "Transience website design",
-    },
-  ],
-};
+import data from "@/data/promotedProjects.json";
+import projectListing from "@/data/projectListing.json";
 
 const Projects = () => {
   const { title, button, projects } = data;
+  const allProjects = projectListing?.projects;
+
+  const promotedProjects = allProjects?.filter((proj) =>
+    projects.includes(proj.id)
+  );
 
   return (
     <>
@@ -50,10 +21,10 @@ const Projects = () => {
         </div>
       </div>
       <div className="md:flex gap-[50px] justify-between">
-        {projects?.map((proj, i) => (
+        {promotedProjects?.map((proj, i) => (
           <ProjectTeaser
             key={`project-${i}`}
-            link={proj?.link}
+            link={`/projects/${proj?.id}`}
             imageSrc={proj?.image?.src}
             imageAlt={proj?.image?.alt}
             subtitle={proj?.subtitle}

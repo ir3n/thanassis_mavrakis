@@ -1,0 +1,21 @@
+{
+  "title": "Services",
+  "services": [
+    {
+      "title": "UI/UX Design",
+      "text": "I specialize in designing websites and apps to be easy to use and look great. Whether you're starting from scratch or want to improve what you already have, I'll make sure your digital stuff is top-notch and user-friendly."
+    },
+    {
+      "title": "Interactive Prototyping",
+      "text": "Offering interactive prototyping services to create functional models of your website or app. It's like a test-drive for your digital product, allowing users to click and interact, ensuring it meets your needs and delights your audience."
+    },
+    {
+      "title": "Branding",
+      "text": "Providing branding services to give your business a unique identity. From logos to color schemes, I'll help you stand out in the crowd and make a lasting impression on your audience."
+    },
+    {
+      "title": "No Code Development",
+      "text": "Offering no-code development services using tools like Webflow, Framer, and Wix. This means faster, more cost-effective solutions for your website or app projects."
+    }
+  ]
+}

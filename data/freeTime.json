@@ -1,0 +1,22 @@
+{
+  "title": "Free time",
+  "text": "When I'm not designing, I'm hanging out with my best friend Rukia. I also enjoy playing and making music, watching anime, and practicing karate.",
+  "images": [
+    {
+      "image": "/images/free-time/rukia.png",
+      "name": "Rukia"
+    },
+    {
+      "image": "/images/free-time/guitar.png",
+      "name": "Guitar"
+    },
+    {
+      "image": "/images/free-time/anime.png",
+      "name": "Anime"
+    },
+    {
+      "image": "/images/free-time/karate.png",
+      "name": "Karate"
+    }
+  ]
+}

@@ -4,15 +4,10 @@ import Services from "@/components/Services";
 import TableWithLogos from "@/components/TableWithLogos";
 import IntroBanner from "@/components/IntroBanner";
 
-const aboutIntro = {
-  title: "About me",
-  text: "<p>I am a UI/UX designer and no code developer based in Athens, Greece. I love making websites that look great and are easy for everyone to use. But I didn't stop at just designing.</p><p>I wanted to offer more, so I learned tools like Webflow and Wix for building websites without needing to code. <em>Staying curious and keeping up with the latest trends and technologies is my thing.</em></p>",
-  image: "/images/thanassis.png",
-  imageAlt: "Thanassis Mavrakis Portrait",
-};
+import data from "@/data/aboutIntro.json";
 
 export default function About() {
-  const { title, text, image, imageAlt } = aboutIntro;
+  const { title, text, image, imageAlt, marquee } = data;
   return (
     <>
       <section className="full-height-section">
@@ -24,7 +19,7 @@ export default function About() {
             imageAlt={imageAlt}
           />
         </div>
-        <Marquee />
+        <Marquee text={marquee} />
       </section>
       <section>
         <Services />

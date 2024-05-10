@@ -1,32 +1,7 @@
-import Link from "next/link";
 import SocialLink from "./SocialLink";
 import CircleButton from "../CircleButton";
 
-const data = {
-  subtitle: "Do you have a project in mind?",
-  title: "Let’s work together",
-  button: {
-    title: "Get in touch",
-    link: "mailto:thanassis.mavrakis@gmail.com",
-  },
-  social: [
-    {
-      name: "LinkedIn",
-      image: "/images/social/linkedin.svg",
-      link: "",
-    },
-    {
-      name: "Email",
-      image: "/images/social/email.svg",
-      link: "",
-    },
-    {
-      name: "Instagram",
-      image: "/images/social/instagram.svg",
-      link: "",
-    },
-  ],
-};
+import data from "@/data/footer.json";
 
 const Contact = () => {
   const { subtitle, title, button, social } = data;

@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "name": "Projects",
+      "link": "/projects"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    }
+  ],
+  "cta": {
+    "name": "Available for hire",
+    "link": "mailto:thanassis.mavrakis@gmail.com"
+  }
+}

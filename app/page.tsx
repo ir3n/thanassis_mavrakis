@@ -7,12 +7,7 @@ import Projects from "@/components/Projects";
 
 import Services from "@/components/Services";
 
-const homeIntro = {
-  title: "UI/UX Designer",
-  text: "Hello, I am Thanassis Mavrakis. A UI/UX designer and no code developer creating beautiful websites that are easy to use and accessible to everyone.",
-  link: "/about",
-  linkText: "About me",
-};
+import homeIntro from "@/data/homeIntro.json";
 
 export default function Home() {
   const { title, text, link, linkText } = homeIntro;

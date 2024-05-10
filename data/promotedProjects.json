@@ -1,0 +1,8 @@
+{
+  "title": "Projects",
+  "button": {
+    "text": "All projects",
+    "url": "/projects"
+  },
+  "projects": ["retool", "papaioannou", "transience"]
+}

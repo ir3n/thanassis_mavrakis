@@ -1,0 +1,40 @@
+[
+  {
+    "id": "papaioannou",
+    "title": "P & A Papaioannou O.E",
+    "date": "February 2023",
+    "services": ["#UI/UX design ", "#Web design"],
+    "banner": "/images/projects/papaioannou/banner.png",
+    "link": "/",
+    "text": "<p>P & A Papaioannou O.E. is a car service company that approached me to redesign their website with a more professional and modern look.</p><p>After conducting extensive research into the car service field and their target audience, I developed a fresh and modern design that perfectly fits their brand image.</p><p> The new design effectively showcases their services and provides an exceptional user experience, helping them stand out in their industry.</p>",
+    "halfImage": {
+      "src": "/images/projects/papaioannou/half-banner.png",
+      "alt": "Desktop hero banner"
+    },
+    "twoImages": [
+      {
+        "src": "/images/projects/papaioannou/two-images-1.png",
+        "alt": "Services"
+      },
+      {
+        "src": "/images/projects/papaioannou/two-images-2.png",
+        "alt": "Contact"
+      }
+    ],
+    "threeImages": [
+      {
+        "src": "/images/projects/papaioannou/three-images-1.png",
+        "alt": "Mobile hero banner"
+      },
+      {
+        "src": "/images/projects/papaioannou/three-images-2.png",
+        "alt": "Mobile services"
+      },
+      {
+        "src": "/images/projects/papaioannou/three-images-3.png",
+        "alt": "Mobile menu"
+      }
+    ],
+    "nextProject": "retool"
+  }
+]

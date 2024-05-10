@@ -1,46 +1,6 @@
 import ProjectTeaser from "@/components/Projects/ProjectTeaser";
 
-const data = {
-  title: "Projects",
-  projects: [
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "Retool Website",
-      },
-      subtitle: "#UI/UX Design",
-      title: "Retool website design",
-    },
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "P&A Papaioannou O.E.",
-      },
-      subtitle: "#UI/UX design, #Web design",
-      title: "P&A Papaioannou O.E. website design & development",
-    },
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "Transience website",
-      },
-      subtitle: "#UI/UX Design",
-      title: "Transience website design",
-    },
-    {
-      link: "",
-      image: {
-        src: "/images/projects/retool-teaser.png",
-        alt: "Transience website",
-      },
-      subtitle: "#UI/UX Design",
-      title: "Transience website design",
-    },
-  ],
-};
+import data from "@/data/projectListing.json";
 
 export default function Projects() {
   const { title, projects } = data;
@@ -57,7 +17,7 @@ export default function Projects() {
             }`}
           >
             <ProjectTeaser
-              link={proj?.link}
+              link={`/projects/${proj?.id}`}
               imageSrc={proj?.image?.src}
               imageAlt={proj?.image?.alt}
               subtitle={proj?.subtitle}
