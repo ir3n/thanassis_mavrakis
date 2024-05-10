@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Menu = ({ openMenu }) => {
+const Menu = ({ openMenu }: { openMenu: boolean }) => {
   return (
     <div
       className={`fixed top-[-100%] left-0 w-full h-full md:relative flex-1 md:flex md:justify-between md:items-center  md:top-auto md:left-auto md:w-auto md:h-auto bg-[url('/images/mobile-menu-bg.png')] bg-no-repeat bg-cover md:bg-none text-center md:text-left pt-[150px] md:pt-0 transition duration-500 ${

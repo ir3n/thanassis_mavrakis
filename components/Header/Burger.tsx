@@ -1,4 +1,11 @@
-function Burger({ openMenu, setOpenMenu }) {
+import { Dispatch, SetStateAction } from "react";
+
+interface BurgerProps {
+  openMenu: boolean;
+  setOpenMenu: Dispatch<SetStateAction<boolean>>;
+}
+
+function Burger({ openMenu, setOpenMenu }: BurgerProps) {
   return (
     <button
       onClick={() => setOpenMenu(!openMenu)}

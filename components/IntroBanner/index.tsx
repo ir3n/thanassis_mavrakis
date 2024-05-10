@@ -41,7 +41,7 @@ const IntroBanner = ({
       </LinkDesktopNolinkMobile>
       {link ? (
         <div className="lg:hidden">
-          <CircleButton text={linkText} url={link} />
+          <CircleButton text={linkText || "View"} url={link} />
         </div>
       ) : null}
 
