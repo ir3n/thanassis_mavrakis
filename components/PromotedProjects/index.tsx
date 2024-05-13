@@ -4,7 +4,7 @@ import CircleButton from "../CircleButton";
 import data from "@/data/promotedProjects.json";
 import projectListing from "@/data/projectListing.json";
 
-const Projects = () => {
+const PromotedProjects = () => {
   const { title, button, projects } = data;
   const allProjects = projectListing?.projects;
 
@@ -25,8 +25,7 @@ const Projects = () => {
           <ProjectTeaser
             key={`project-${i}`}
             link={`/projects/${proj?.id}`}
-            imageSrc={proj?.image?.src}
-            imageAlt={proj?.image?.alt}
+            image={proj?.image}
             subtitle={proj?.subtitle}
             title={proj?.title}
           />
@@ -36,4 +35,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default PromotedProjects;

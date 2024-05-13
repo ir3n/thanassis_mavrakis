@@ -104,6 +104,10 @@ p em {
   @apply text-accent not-italic;
 }
 
+p a {
+  @apply underline hover:text-accent transition duration-300;
+}
+
 /* buttons */
 .ghost-cta {
   @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;

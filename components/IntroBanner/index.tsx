@@ -5,20 +5,12 @@ import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
 interface IntroData {
   title: string;
   text: string;
-  image?: string;
-  imageAlt?: string;
+  image?: ImageType;
   link?: string;
   linkText?: string;
 }
 
-const IntroBanner = ({
-  title,
-  text,
-  image,
-  imageAlt,
-  link,
-  linkText,
-}: IntroData) => {
+const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
   return (
     <div
       className={`relative ${
@@ -47,10 +39,10 @@ const IntroBanner = ({
       {image ? (
         <div className="my-[-50px] lg:my-0 lg:absolute lg:right-[50px] lg:bottom-[-20px] lg:w-5/12 max-w-[245px] lg:max-w-full">
           <Image
-            src={image}
+            src={image?.src}
             width={675}
             height={815}
-            alt={imageAlt || ""}
+            alt={image?.alt}
             style={{ marginLeft: "auto" }}
           />
         </div>

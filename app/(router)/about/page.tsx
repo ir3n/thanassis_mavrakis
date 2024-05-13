@@ -7,17 +7,12 @@ import IntroBanner from "@/components/IntroBanner";
 import data from "@/data/aboutIntro.json";
 
 export default function About() {
-  const { title, text, image, imageAlt, marquee } = data;
+  const { title, text, image, marquee } = data;
   return (
     <>
       <section className="full-height-section">
         <div className="container">
-          <IntroBanner
-            title={title}
-            text={text}
-            image={image}
-            imageAlt={imageAlt}
-          />
+          <IntroBanner title={title} text={text} image={image} />
         </div>
         <Marquee text={marquee} />
       </section>

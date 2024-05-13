@@ -1,4 +1,4 @@
-import ProjectTeaser from "@/components/Projects/ProjectTeaser";
+import ProjectTeaser from "@/components/PromotedProjects/ProjectTeaser";
 
 import data from "@/data/projectListing.json";
 
@@ -18,8 +18,7 @@ export default function Projects() {
           >
             <ProjectTeaser
               link={`/projects/${proj?.id}`}
-              imageSrc={proj?.image?.src}
-              imageAlt={proj?.image?.alt}
+              image={proj?.image}
               subtitle={proj?.subtitle}
               title={proj?.title}
             />

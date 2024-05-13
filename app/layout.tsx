@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed`}
       >

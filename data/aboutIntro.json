@@ -1,7 +1,9 @@
 {
   "title": "About me",
   "text": "<p>I am a UI/UX designer and no code developer based in Athens, Greece. I love making websites that look great and are easy for everyone to use. But I didn't stop at just designing.</p><p>I wanted to offer more, so I learned tools like Webflow and Wix for building websites without needing to code. <em>Staying curious and keeping up with the latest trends and technologies is my thing.</em></p>",
-  "image": "/images/thanassis.png",
-  "imageAlt": "Thanassis Mavrakis Portrait",
+  "image": {
+    "src": "/images/thanassis.png",
+    "alt": "Thanassis Mavrakis Portrait"
+  },
   "marquee": ["Thanassis Mavrakis", "UI/UX Designer", "No code Developer"]
 }

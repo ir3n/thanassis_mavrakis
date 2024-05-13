@@ -2,17 +2,6 @@ import Image from "next/image";
 
 import data from "@/data/freeTime.json";
 
-interface FreeTime {
-  title: string;
-  text: string;
-  images: FreeTimeImage[];
-}
-
-interface FreeTimeImage {
-  image: string;
-  name: string;
-}
-
 const FreeTimeGrid = () => {
   return (
     <div className="container">

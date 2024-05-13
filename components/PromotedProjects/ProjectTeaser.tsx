@@ -6,19 +6,12 @@ import Image from "next/image";
 
 interface ProjTeaser {
   link: string;
-  imageSrc: string;
-  imageAlt: string;
+  image: ImageType;
   subtitle: string;
   title: string;
 }
 
-const ProjectTeaser = ({
-  link,
-  imageSrc,
-  imageAlt,
-  subtitle,
-  title,
-}: ProjTeaser) => {
+const ProjectTeaser = ({ link, image, subtitle, title }: ProjTeaser) => {
   const [hover, setHover] = useState(false);
   return (
     <div className="max-w-[660px] mx-auto mb-[60px] md:mb-0 flex-1">
@@ -39,7 +32,12 @@ const ProjectTeaser = ({
                 hover ? "lg:rotate-0" : "lg:rotate-[7deg]"
               }`}
             >
-              <Image src={imageSrc} width={660} height={698} alt={imageAlt} />
+              <Image
+                src={image?.src}
+                width={660}
+                height={698}
+                alt={image?.alt}
+              />
             </div>
           </div>
           <div
