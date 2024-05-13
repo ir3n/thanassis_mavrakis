@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className="relative">
-      <div className="absolute top-0 left-[20px] lg:left-[50px] right-[20px] lg:right-[50px] bottom-0 bg-secondary rounded backdrop-blur opacity-50"></div>
+      <div className="absolute top-0 left-[20px] lg:left-[50px] right-[20px] lg:right-[50px] bottom-0 bg-secondary rounded backdrop-blur"></div>
       <div className="container py-[40px] lg:py-[110px] relative z-1">
         <div className="flex justify-between gap-20 px-[20px] md:px-[0] relative pb-[150px] md:pb-0">
           <div>

@@ -52,7 +52,7 @@ body {
   @apply opacity-50 scale-0;
 }
 .mf-cursor-text {
-  @apply text-white p-2 text-[1.2rem] w-[100px] h-[100px] top-[-50px] left-[-50px];
+  @apply font-body text-white p-2 text-[1.2rem] w-[100px] h-[100px] top-[-50px] left-[-50px];
 }
 *[data-cursor-img],
 *[data-cursor-text] {

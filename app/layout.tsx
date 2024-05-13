@@ -49,6 +49,15 @@ export default function RootLayout({
               style={{ width: "100%" }}
             />
           </div>
+          <div className="absolute bottom-0 left-0 hidden lg:block lg:w-1/4">
+            <Image
+              src="/images/bottom-splash.svg"
+              width={547}
+              height={880}
+              alt="Splash"
+              style={{ width: "100%" }}
+            />
+          </div>
           <Header />
           <main className="relative z-1">{children}</main>
           <footer className="relative z-1">
