@@ -10,6 +10,9 @@ body {
 body {
   @apply text-white;
 }
+a {
+  @apply lg:cursor-none;
+}
 .container {
   @apply max-w-full lg:max-w-[1800px] px-[20px] md:px-[60px] lg:px-[100px] mx-auto;
 }
@@ -38,25 +41,20 @@ body {
 }
 
 /* cursor */
-.mf-cursor:before {
-  @apply bg-accent scale-[0.55];
+.mf-cursor.-pointer:not(.-text) {
+  mix-blend-mode: screen;
 }
+
+.mf-cursor:before,
 .mf-cursor.-pointer:before {
-  @apply opacity-50 scale-0;
+  @apply bg-accent scale-[0.55];
 }
 .mf-cursor.-text:before,
 .mf-cursor.-text.-active:before {
   @apply opacity-100 bg-accent scale-[2.3];
 }
-.mf-cursor.-hidden:before {
-  @apply opacity-50 scale-0;
-}
 .mf-cursor-text {
   @apply font-body text-white p-2 text-[1.2rem] w-[100px] h-[100px] top-[-50px] left-[-50px];
-}
-*[data-cursor-img],
-*[data-cursor-text] {
-  cursor: none !important;
 }
 
 /* Typography */
