@@ -1,14 +1,40 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 import SocialLink from "./SocialLink";
 import CircleButton from "../CircleButton";
 
 import data from "@/data/footer.json";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
+
 const Contact = () => {
   const { subtitle, title, button, social } = data;
 
+  useGSAP(() => {
+    gsap.to(".inner", {
+      scale: 1,
+      borderRadius: 0,
+      scrollTrigger: {
+        trigger: ".box",
+        start: "center bottom",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+  });
+
   return (
     <div className="relative">
-      <div className="absolute top-0 left-[20px] lg:left-[50px] right-[20px] lg:right-[50px] bottom-0 bg-secondary rounded backdrop-blur"></div>
+      <div className="box absolute top-0 left-[20px] lg:left-[50px] right-[20px] lg:right-[50px] bottom-0 rounded overflow-hidden flex items-center justify-center">
+        <div className="inner md:w-full h-full md:h-auto aspect-square bg-secondary backdrop-blur scale-[10%] origin-center rounded-full"></div>
+      </div>
       <div className="container py-[40px] lg:py-[110px] relative z-1">
         <div className="flex justify-between gap-20 px-[20px] md:px-[0] relative pb-[150px] md:pb-0">
           <div>
