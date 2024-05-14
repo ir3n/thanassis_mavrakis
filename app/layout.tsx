@@ -5,6 +5,7 @@ import MouseFollowerComponent from "@/components/MouseFollower";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import Copyrights from "@/components/Copyrights";
+import BrushStroke from "@/components/BrushStroke";
 
 import "@/styles/globals.css";
 
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed`}
+        className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed overflow-x-hidden`}
       >
         <MouseFollowerComponent>
           <div className="fixed top-0 right-0 bottom-0 left-0">
@@ -40,24 +41,20 @@ export default function RootLayout({
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
-          <div className="absolute top-0 right-0 w-3/5 md:w-1/2 lg:w-1/3">
-            <Image
-              src="/images/splash.svg"
-              width={690}
-              height={960}
-              alt="Splash"
-              style={{ width: "100%" }}
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 hidden lg:block lg:w-1/4">
-            <Image
-              src="/images/bottom-splash.svg"
-              width={547}
-              height={880}
-              alt="Splash"
-              style={{ width: "100%" }}
-            />
-          </div>
+          <BrushStroke
+            image="/images/splash.svg"
+            width={690}
+            height={960}
+            className="absolute top-0 right-0 w-3/5 md:w-1/2 lg:w-1/3"
+            from="right"
+          />
+          <BrushStroke
+            image="/images/bottom-splash.svg"
+            width={547}
+            height={880}
+            className="absolute bottom-0 left-0 hidden lg:block lg:w-1/4"
+            from="left"
+          />
           <Header />
           <main className="relative z-1">{children}</main>
           <footer className="relative z-1">
