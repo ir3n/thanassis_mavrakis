@@ -20,7 +20,7 @@ const PromotedProjects = () => {
           <CircleButton text={button?.text} url={button?.url} />
         </div>
       </div>
-      <div className="md:flex gap-[50px] justify-between">
+      <div className="md:flex gap-[50px] lg:gap-[90px] justify-between">
         {promotedProjects?.map((proj, i) => (
           <ProjectTeaser
             key={`project-${i}`}

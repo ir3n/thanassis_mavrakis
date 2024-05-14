@@ -21,7 +21,7 @@ const ProjectTeaser = ({ link, image, subtitle, title }: ProjTeaser) => {
           onMouseLeave={() => setHover(false)}
           className="px-[10px] md:px-0"
         >
-          <div className="relative mb-[10px] lg:mb-[40px]">
+          <div className="relative mb-[20px] lg:mb-[40px]">
             <div
               className={`bg-secondary rounded absolute top-0 left-0 w-full h-full transition duration-500 ${
                 hover ? "rotate-[7deg]" : "rotate-[7deg] lg:rotate-0"
