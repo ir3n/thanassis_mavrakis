@@ -41,22 +41,22 @@ a {
 }
 
 /* cursor */
-
 .mf-cursor.-pointer:not(.-text) {
   mix-blend-mode: screen;
 }
-
-.mf-cursor:before,
-.mf-cursor.-pointer:before {
+.mf-cursor:before {
   @apply bg-accent scale-[0.55];
 }
 .mf-cursor.-text:before,
 .mf-cursor.-text.-active:before,
-.mf-cursor.-scale:before {
+.mf-cursor.-pointer:before {
   @apply opacity-100 bg-accent scale-[2.3];
 }
 .mf-cursor-text {
   @apply font-body text-white p-2 text-[1.2rem] w-[100px] h-[100px] top-[-50px] left-[-50px];
+}
+.mf-cursor.-opacity:before {
+  @apply opacity-0 scale-[0.55];
 }
 
 /* Typography */

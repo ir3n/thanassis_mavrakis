@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import SocialLink from "./SocialLink";
-import CircleButton from "../CircleButton/CircleButton";
+import CircleButton from "../CircleButton";
 
 import data from "@/data/footer.json";
 

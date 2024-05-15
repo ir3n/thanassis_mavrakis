@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CircleButton from "../CircleButton/CircleButton";
+import CircleButton from "../CircleButton";
 import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
 
 interface IntroData {

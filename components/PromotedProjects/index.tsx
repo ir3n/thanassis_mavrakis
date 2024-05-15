@@ -1,5 +1,5 @@
 import ProjectTeaser from "./ProjectTeaser";
-import CircleButton from "../CircleButton/CircleButton";
+import CircleButton from "../CircleButton";
 
 import data from "@/data/promotedProjects.json";
 import projectListing from "@/data/projectListing.json";

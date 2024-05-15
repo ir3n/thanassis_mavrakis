@@ -1,11 +1,17 @@
 import React from "react";
 
-function ButtonFill({ show }: { show: boolean }) {
+interface Props {
+  show: boolean;
+  color?: "white" | "accent";
+}
+
+function ButtonFill({ show, color = "white" }: Props) {
+  const background = color === "accent" ? "bg-accent" : "bg-white";
   return (
     <div
-      className={`absolute top-0 left-0 w-full h-full origin-bottom bg-accent transition duration-300 rounded-full ${
+      className={`absolute top-0 left-0 w-full h-full origin-bottom transition duration-300 rounded-full ${
         show ? "scale-none" : "scale-y-0"
-      }`}
+      } ${background}`}
     ></div>
   );
 }
