@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -23,7 +23,7 @@ const Contact = () => {
       let timeline = gsap.timeline({
         scrollTrigger: {
           trigger: ".box",
-          start: "center bottom",
+          start: "70% bottom",
           end: "bottom bottom",
           scrub: true,
         },

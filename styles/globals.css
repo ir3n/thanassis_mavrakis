@@ -41,12 +41,14 @@ a {
 }
 
 /* cursor */
+.mf-cursor.-pointer:before {
+  @apply bg-accent scale-[1.5];
+}
 .mf-cursor.-pointer:not(.-text) {
   mix-blend-mode: screen;
 }
 
-.mf-cursor:before,
-.mf-cursor.-pointer:before {
+.mf-cursor:before {
   @apply bg-accent scale-[0.55];
 }
 .mf-cursor.-text:before,
