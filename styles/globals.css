@@ -41,18 +41,18 @@ a {
 }
 
 /* cursor */
-.mf-cursor.-pointer:before {
-  @apply bg-accent scale-[1.5];
-}
+
 .mf-cursor.-pointer:not(.-text) {
   mix-blend-mode: screen;
 }
 
-.mf-cursor:before {
+.mf-cursor:before,
+.mf-cursor.-pointer:before {
   @apply bg-accent scale-[0.55];
 }
 .mf-cursor.-text:before,
-.mf-cursor.-text.-active:before {
+.mf-cursor.-text.-active:before,
+.mf-cursor.-scale:before {
   @apply opacity-100 bg-accent scale-[2.3];
 }
 .mf-cursor-text {
@@ -105,10 +105,5 @@ p em {
 }
 
 p a {
-  @apply underline hover:text-accent transition duration-300;
-}
-
-/* buttons */
-.ghost-cta {
-  @apply px-[20px] py-[10px] border border-solid border-white rounded-3xl;
+  @apply underline;
 }

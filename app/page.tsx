@@ -22,7 +22,7 @@ export default function Home() {
           linkText={linkText}
         />
         <div className="hidden lg:block xxl:mt-[100px] w-fit mx-auto">
-          <Link href={`#projects`}>
+          <Link href={`#projects`} data-cursor="-scale">
             <RotatingTextIcon name="scrolldown">
               <ArrowDown size={68} color="white" />
             </RotatingTextIcon>

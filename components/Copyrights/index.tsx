@@ -11,7 +11,8 @@ const Copyrights = () => {
           <Link
             href="https://www.ireneborada.com"
             target="_blank"
-            className="hover:text-accent transition duration-500"
+            className="transition duration-500"
+            data-cursor="-scale"
           >
             Irene Borada.
           </Link>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import data from "@/data/header.json";
+import MenuItem from "./MenuItem";
+import GhostButton from "../GhostButton";
 
 const Menu = ({ openMenu }: { openMenu: boolean }) => {
   const { menu, cta } = data;
@@ -21,19 +23,13 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
           </li>
           {menu?.map((item, i) => (
             <li key={`menu-item-${i}`} className="mb-[50px] md:mb-0">
-              <Link href={item?.link} className="text-lg">
-                {item?.name}
-              </Link>
+              <MenuItem link={item?.link} name={item?.name} />
             </li>
           ))}
         </ul>
       </nav>
 
-      {cta && (
-        <Link href={cta?.link} className="text-lg ghost-cta">
-          {cta?.name}
-        </Link>
-      )}
+      {cta && <GhostButton link={cta?.link} name={cta?.name} />}
 
       <div className="md:hidden absolute bottom-0 left-0 right-0 z-[-1]">
         <Image

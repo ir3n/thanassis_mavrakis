@@ -16,6 +16,7 @@ const SocialLink = ({ name, image, link }: Social) => {
   return (
     <div
       className="relative w-[60px] lg:w-[100px] h-[60px] lg:h-[100px] rounded-full overflow-hidden"
+      magnetic-element="true"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >

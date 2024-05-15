@@ -2,7 +2,7 @@
 
 import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
 import Image from "next/image";
-import CircleButton from "../CircleButton";
+import CircleButton from "../CircleButton/CircleButton";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
