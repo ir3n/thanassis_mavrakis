@@ -9,6 +9,8 @@ function Burger({ openMenu, setOpenMenu }: BurgerProps) {
   return (
     <button
       onClick={() => setOpenMenu(!openMenu)}
+      type="button"
+      aria-label={openMenu ? "close menu" : "open menu"}
       className="py-[10px] md:hidden ml-auto relative z-50"
     >
       <div

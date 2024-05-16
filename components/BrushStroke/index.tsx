@@ -19,6 +19,7 @@ function BrushStroke({ image, className, width, height, from }: Props) {
         width={width}
         height={height}
         style={{ width: "100%" }}
+        loading="eager"
       />
     </div>
   );
