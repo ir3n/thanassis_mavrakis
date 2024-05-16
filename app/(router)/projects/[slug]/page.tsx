@@ -3,6 +3,7 @@ import NextProject from "@/components/ProjectPageComponents/NextProject";
 import ProjectBanner from "@/components/ProjectPageComponents/ProjectBanner";
 import ThreeImages from "@/components/ProjectPageComponents/ThreeImages";
 import TwoImages from "@/components/ProjectPageComponents/TwoImages";
+import ShowAnimation from "@/components/ShowAnimation";
 import allProjects from "@/data/fullProjects.json";
 
 import projectTeasers from "@/data/projectListing.json";

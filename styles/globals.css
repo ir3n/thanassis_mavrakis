@@ -16,11 +16,9 @@ a {
 .container {
   @apply max-w-full lg:max-w-[1800px] px-[20px] md:px-[60px] lg:px-[100px] mx-auto;
 }
-
 .full-height-section {
   @apply min-h-screen flex flex-col justify-center pt-[150px] md:pt-[200px] lg:pt-[250px];
 }
-
 .rounded {
   @apply rounded-[14px] lg:rounded-[20px] overflow-hidden;
 }
@@ -29,12 +27,10 @@ a {
 *::-webkit-scrollbar {
   width: 6px;
 }
-
 *::-webkit-scrollbar-track {
   width: 6px;
   @apply bg-dark;
 }
-
 *::-webkit-scrollbar-thumb {
   width: 6px;
   @apply bg-accent;
@@ -103,7 +99,6 @@ a {
 p em {
   @apply text-accent not-italic;
 }
-
 p a {
   @apply underline;
 }

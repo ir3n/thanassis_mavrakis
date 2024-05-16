@@ -8,3 +8,8 @@ interface LinkType {
   link: string;
   name: string;
 }
+interface AnimationType {
+  children: React.ReactNode;
+  animation: "fromBelow" | "popIn";
+  delay?: number;
+}
