@@ -13,7 +13,13 @@ interface Props {
 function BrushStroke({ image, className, width, height, from }: Props) {
   return (
     <div className={`stroke ${className}`}>
-      <Image src={image} alt="Brush stroke" width={width} height={height} />
+      <Image
+        src={image}
+        alt="Brush stroke"
+        width={width}
+        height={height}
+        style={{ width: "100%" }}
+      />
     </div>
   );
 }
