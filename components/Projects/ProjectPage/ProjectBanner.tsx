@@ -6,7 +6,6 @@ import Image from "next/image";
 import CircleButton from "../../Buttons/CircleButton";
 import Text from "@/components/Typography/Text";
 
-import { useIsVisible } from "@/hooks/useIsVisible";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 type Props = {
@@ -21,7 +20,6 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
   const desk = useWindowWidth() > 1024;
 
   const ref = useRef(null);
-  const show = useIsVisible(ref);
 
   return (
     <div ref={ref}>
@@ -33,9 +31,7 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
           className={"bg-secondary rounded flex flex-col-reverse md:flex-row"}
         >
           <div
-            className={`p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-1/3 transition duration-[2500ms] ${
-              show ? "" : ""
-            }`}
+            className={`p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-1/3 transition duration-[2500ms] `}
           >
             <div className="text-[0.75rem] lg:text-[1.125rem] font-light font-body">
               {date}

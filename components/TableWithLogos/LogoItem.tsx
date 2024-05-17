@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Text from "../Typography/Text";
 
 interface LogoProps {

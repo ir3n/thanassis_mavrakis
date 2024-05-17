@@ -1,5 +1,5 @@
 import LogoItem from "./LogoItem";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Title from "../Typography/Title";
 
 import data from "@/data/stack.json";

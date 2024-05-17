@@ -3,7 +3,7 @@ import NextProject from "@/components/Projects/ProjectPage/NextProject";
 import ProjectBanner from "@/components/Projects/ProjectPage/ProjectBanner";
 import ThreeImages from "@/components/Projects/ProjectPage/ThreeImages";
 import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
-import ShowAnimation from "@/components/ShowAnimation";
+import ShowAnimation from "@/components/ShowAnimation/ShowOnScroll";
 import allProjects from "@/data/fullProjects.json";
 import Title from "@/components/Typography/Title";
 

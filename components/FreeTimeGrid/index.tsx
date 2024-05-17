@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import data from "@/data/freeTime.json";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 
@@ -32,7 +32,7 @@ const FreeTimeGrid = () => {
                 : "col-span-1 h-[220px] md:h-[15rem] lg:h-[27rem]"
             } ${i === 1 && "col-span-2 md:col-span-1"}`}
           >
-            <ShowAnimation animation="popIn" full={true}>
+            <ShowAnimation animation="popIn" delay={i} full={true}>
               <div className="relative w-full h-full rounded">
                 <Image
                   src={el.image}

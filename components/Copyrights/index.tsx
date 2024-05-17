@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Text from "../Typography/Text";
 
 const Copyrights = () => {

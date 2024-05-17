@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import SocialLink from "./SocialLink";
 import CircleButton from "../Buttons/CircleButton";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 

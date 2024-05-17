@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CircleButton from "../Buttons/CircleButton";
 import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
-import ShowAnimation from "../ShowAnimation";
+import ShowAnimation from "../ShowAnimation/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 
@@ -56,6 +56,7 @@ const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
               height={815}
               alt={image?.alt}
               style={{ marginLeft: "auto" }}
+              loading="eager"
             />
           </ShowAnimation>
         </div>
