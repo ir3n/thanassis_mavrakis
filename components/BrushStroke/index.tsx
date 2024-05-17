@@ -7,10 +7,9 @@ interface Props {
   className: string;
   width: number;
   height: number;
-  from: "left" | "right";
 }
 
-function BrushStroke({ image, className, width, height, from }: Props) {
+function BrushStroke({ image, className, width, height }: Props) {
   return (
     <div className={`stroke ${className}`}>
       <Image

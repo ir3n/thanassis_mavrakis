@@ -48,14 +48,12 @@ export default function RootLayout({
               width={690}
               height={960}
               className="absolute top-0 right-0 w-3/5 md:w-1/2 lg:w-1/3"
-              from="right"
             />
             <BrushStroke
               image="/images/bottom-splash.svg"
               width={547}
               height={880}
               className="absolute bottom-0 left-0 hidden lg:block lg:w-1/4"
-              from="left"
             />
             <Header />
             <main className="relative z-1">{children}</main>

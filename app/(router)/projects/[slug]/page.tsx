@@ -33,7 +33,9 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
-      <h1 className="project-title mb-[40px] lg:mb-[125px]">{data?.title}</h1>
+      <ShowAnimation animation="fromBelow">
+        <h1 className="project-title mb-[40px] lg:mb-[125px]">{data?.title}</h1>
+      </ShowAnimation>
 
       <section className="mb-[60px] lg:mb-[250px]">
         <ProjectBanner
