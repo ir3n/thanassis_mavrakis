@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
+import LinkDesktopNolinkMobile from "../../LinkDesktopNolinkMobile";
 import Image from "next/image";
-import CircleButton from "../CircleButton";
+import CircleButton from "../../Buttons/CircleButton";
 
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { useWindowWidth } from "@/hooks/useWindowWidth";

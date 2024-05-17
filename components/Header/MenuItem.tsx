@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import TextsForButton from "../ButtonText";
+import TextsForButton from "../Buttons/ButtonText";
 
 function MenuItem({ link, name }: LinkType) {
   const [hover, setHover] = useState(false);

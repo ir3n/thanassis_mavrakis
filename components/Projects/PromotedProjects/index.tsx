@@ -1,6 +1,6 @@
-import ProjectTeaser from "./ProjectTeaser";
-import CircleButton from "../CircleButton";
-import ShowAnimation from "../ShowAnimation";
+import ProjectTeaser from "../ProjectTeaser";
+import CircleButton from "../../Buttons/CircleButton";
+import ShowAnimation from "../../ShowAnimation";
 
 import data from "@/data/promotedProjects.json";
 import projectListing from "@/data/projectListing.json";

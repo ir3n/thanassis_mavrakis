@@ -1,4 +1,4 @@
-import ProjectTeaser from "@/components/PromotedProjects/ProjectTeaser";
+import ProjectTeaser from "@/components/Projects/ProjectTeaser";
 import ShowAnimation from "@/components/ShowAnimation";
 
 import data from "@/data/projectListing.json";

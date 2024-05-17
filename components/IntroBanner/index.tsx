@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CircleButton from "../CircleButton";
+import CircleButton from "../Buttons/CircleButton";
 import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
 import ShowAnimation from "../ShowAnimation";
 

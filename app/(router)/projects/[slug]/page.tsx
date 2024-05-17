@@ -1,8 +1,8 @@
-import HalfImageHalfText from "@/components/ProjectPageComponents/HalfImageHalfText";
-import NextProject from "@/components/ProjectPageComponents/NextProject";
-import ProjectBanner from "@/components/ProjectPageComponents/ProjectBanner";
-import ThreeImages from "@/components/ProjectPageComponents/ThreeImages";
-import TwoImages from "@/components/ProjectPageComponents/TwoImages";
+import HalfImageHalfText from "@/components/Projects/ProjectPage/HalfImageHalfText";
+import NextProject from "@/components/Projects/ProjectPage/NextProject";
+import ProjectBanner from "@/components/Projects/ProjectPage/ProjectBanner";
+import ThreeImages from "@/components/Projects/ProjectPage/ThreeImages";
+import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
 import ShowAnimation from "@/components/ShowAnimation";
 import allProjects from "@/data/fullProjects.json";
 
