@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import LinkDesktopNolinkMobile from "../../LinkDesktopNolinkMobile";
 import CircleButton from "../../Buttons/CircleButton";
+import Title from "@/components/Typography/Title";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
@@ -25,7 +26,10 @@ function NextProject({ project }: { project: Props }) {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white from-[-100%] opacity-50"></div>
           <div className="max-w-[933px] w-full font-heading">
             <h3 className="text-[1.25rem] lg:text-[3rem]">Next Project</h3>
-            <h4 className="project-title mb-4 lg:mb-0">{project?.title}</h4>
+            <Title size="project">
+              <h4 className="mb-4 lg:mb-0">{project?.title}</h4>
+            </Title>
+
             {!desk && (
               <div className="w-fit ml-auto md:ml-0">
                 <CircleButton

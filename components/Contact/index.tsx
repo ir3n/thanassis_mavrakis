@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SocialLink from "./SocialLink";
 import CircleButton from "../Buttons/CircleButton";
 import ShowAnimation from "../ShowAnimation";
+import Title from "../Typography/Title";
+import Text from "../Typography/Text";
 
 import data from "@/data/footer.json";
 
@@ -56,14 +58,16 @@ const Contact = () => {
       <div className="container py-[40px] lg:py-[110px] relative z-1">
         <div className="flex justify-between gap-20 px-[20px] md:px-[0] relative pb-[150px] md:pb-0">
           <div>
-            <div className="text-lg text-accent lg:mb-[20px]">
-              <ShowAnimation animation="fromBelow">{subtitle}</ShowAnimation>
-            </div>
-            <h2 className="title mb-[50px] lg:mb-[100px]">
-              <ShowAnimation animation="fromBelow" delay={1}>
-                {title}
-              </ShowAnimation>
-            </h2>
+            <ShowAnimation>
+              <Text size="lg">
+                <div className="text-accent lg:mb-[20px]">{subtitle}</div>
+              </Text>
+            </ShowAnimation>
+            <ShowAnimation delay={1}>
+              <Title>
+                <h2 className="mb-[50px] lg:mb-[100px]">{title}</h2>
+              </Title>
+            </ShowAnimation>
             <div className="flex items-center">
               <ul className="flex">
                 {social?.map((item, i) => (

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import LinkDesktopNolinkMobile from "../../LinkDesktopNolinkMobile";
 import Image from "next/image";
 import CircleButton from "../../Buttons/CircleButton";
+import Text from "@/components/Typography/Text";
 
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
@@ -46,11 +47,8 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
                 </h2>
 
                 {services?.map((item, i) => (
-                  <div
-                    key={`service-${i}`}
-                    className="mb-[5px] text-lg font-light font-body"
-                  >
-                    {item}
+                  <div key={`service-${i}`} className="mb-[5px]">
+                    <Text size="lg">{item}</Text>
                   </div>
                 ))}
               </div>

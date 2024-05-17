@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import data from "@/data/freeTime.json";
 import ShowAnimation from "../ShowAnimation";
+import Title from "../Typography/Title";
+import Text from "../Typography/Text";
 
 const FreeTimeGrid = () => {
   return (
@@ -9,14 +11,15 @@ const FreeTimeGrid = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-[15px] lg:gap-[40px]">
         <div className="col-span-2 md:col-span-1 mb-[10px] md:mb-0">
           <div className="h-full flex flex-col justify-center ">
-            <h2 className="title mb-[20px] lg:mb-[40px]">
-              <ShowAnimation animation="fromBelow">{data?.title}</ShowAnimation>
-            </h2>
-            <ShowAnimation animation="fromBelow">
-              <div
-                className="text-lg"
-                dangerouslySetInnerHTML={{ __html: data?.text }}
-              ></div>
+            <ShowAnimation>
+              <Title>
+                <h2 className="mb-[20px] lg:mb-[40px]">{data?.title}</h2>
+              </Title>
+            </ShowAnimation>
+            <ShowAnimation delay={1}>
+              <Text>
+                <div dangerouslySetInnerHTML={{ __html: data?.text }}></div>
+              </Text>
             </ShowAnimation>
           </div>
         </div>
@@ -29,7 +32,7 @@ const FreeTimeGrid = () => {
                 : "col-span-1 h-[220px] md:h-[15rem] lg:h-[27rem]"
             } ${i === 1 && "col-span-2 md:col-span-1"}`}
           >
-            <ShowAnimation animation="popIn">
+            <ShowAnimation animation="popIn" full={true}>
               <div className="relative w-full h-full rounded">
                 <Image
                   src={el.image}

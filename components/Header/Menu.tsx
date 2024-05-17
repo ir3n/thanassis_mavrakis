@@ -4,6 +4,7 @@ import Image from "next/image";
 import data from "@/data/header.json";
 import MenuItem from "./MenuItem";
 import GhostButton from "../Buttons/GhostButton";
+import Text from "../Typography/Text";
 
 const Menu = ({ openMenu }: { openMenu: boolean }) => {
   const { menu, cta } = data;
@@ -17,8 +18,8 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
       <nav className="m-auto">
         <ul className="md:flex items-center gap-[80px]">
           <li className="md:hidden mb-[50px] md:mb-0">
-            <Link href="/" className="text-lg">
-              Home
+            <Link href="/">
+              <Text size="lg">Home</Text>
             </Link>
           </li>
           {menu?.map((item, i) => (

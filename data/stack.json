@@ -1,32 +1,35 @@
-[
-  {
-    "name": "Figma",
-    "icon": "/images/stack/figma.svg",
-    "text": "#UI/UX design"
-  },
-  {
-    "name": "Webflow",
-    "icon": "/images/stack/webflow.svg",
-    "text": "#Web design"
-  },
-  {
-    "name": "Framer",
-    "icon": "/images/stack/framer.svg",
-    "text": "#Web design"
-  },
-  {
-    "name": "Wix",
-    "icon": "/images/stack/wix.svg",
-    "text": "#Web design"
-  },
-  {
-    "name": "Illustrator",
-    "icon": "/images/stack/ai.svg",
-    "text": "#Illustrations"
-  },
-  {
-    "name": "Photoshop",
-    "icon": "/images/stack/ps.svg",
-    "text": "#Photo edit"
-  }
-]
+{
+  "title": "Stack",
+  "logos": [
+    {
+      "name": "Figma",
+      "icon": "/images/stack/figma.svg",
+      "text": "#UI/UX design"
+    },
+    {
+      "name": "Webflow",
+      "icon": "/images/stack/webflow.svg",
+      "text": "#Web design"
+    },
+    {
+      "name": "Framer",
+      "icon": "/images/stack/framer.svg",
+      "text": "#Web design"
+    },
+    {
+      "name": "Wix",
+      "icon": "/images/stack/wix.svg",
+      "text": "#Web design"
+    },
+    {
+      "name": "Illustrator",
+      "icon": "/images/stack/ai.svg",
+      "text": "#Illustrations"
+    },
+    {
+      "name": "Photoshop",
+      "icon": "/images/stack/ps.svg",
+      "text": "#Photo edit"
+    }
+  ]
+}

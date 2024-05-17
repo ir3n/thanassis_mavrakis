@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ShowAnimation from "../ShowAnimation";
+import Text from "../Typography/Text";
 
 interface LogoProps {
   name: string;
@@ -12,13 +13,15 @@ const LogoItem = ({ name, icon, text }: LogoProps) => {
       className="flex pt-[30px] lg:pt-[80px] pb-[30px] lg:pb-[40px] px-[20px] lg:grayscale hover:grayscale-0 transition duration-500"
       data-cursor-text={name}
     >
-      <ShowAnimation animation="popIn">
+      <ShowAnimation animation="popIn" full={true}>
         <div className="max-w-[80px] lg:max-w-[130px] mb-[10px] lg:mb-[35px] m-auto">
           <Image src={icon} width={130} height={130} alt={name} />
         </div>
 
-        <p className="text-sm hidden lg:block text-center">{text}</p>
-        <p className="text-sm lg:hidden text-center">{name}</p>
+        <Text size="sm">
+          <p className="hidden lg:block text-center">{text}</p>
+          <p className="lg:hidden text-center">{name}</p>
+        </Text>
       </ShowAnimation>
     </div>
   );

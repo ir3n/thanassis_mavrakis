@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import Text from "../Typography/Text";
+
 interface ProjTeaser {
   link: string;
   image: ImageType;
@@ -41,16 +43,16 @@ const ProjectTeaser = ({ link, image, subtitle, title }: ProjTeaser) => {
             </div>
           </div>
           <div
-            className={`text-sm transition duration-500 ${
+            className={`transition duration-500 ${
               hover
                 ? "transform-none opacity-1"
                 : "lg:translate-y-[-50%] lg:opacity-0"
             }`}
           >
-            {subtitle}
+            <Text size="sm">{subtitle}</Text>
           </div>
           <h3
-            className={`title-xs transition duration-500 delay-100 ${
+            className={`text-[1.625rem] lg:text-[2rem]  leading-[1.2] lg:leading-[1.3] font-semibold font-heading transition duration-500 delay-100 ${
               hover
                 ? "transform-none opacity-1"
                 : "lg:translate-y-[-50%] lg:opacity-0"

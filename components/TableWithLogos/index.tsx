@@ -1,16 +1,19 @@
 import LogoItem from "./LogoItem";
 import ShowAnimation from "../ShowAnimation";
+import Title from "../Typography/Title";
 
-import logos from "@/data/stack.json";
+import data from "@/data/stack.json";
 
 const TableWithLogos = () => {
   return (
     <div className="container">
-      <h2 className="title mb-[40px] lg:mb-[100px]">
-        <ShowAnimation animation="fromBelow">My stack</ShowAnimation>
-      </h2>
+      <ShowAnimation>
+        <Title>
+          <h2 className="mb-[40px] lg:mb-[100px]">{data?.title}</h2>
+        </Title>
+      </ShowAnimation>
       <div className="grid grid-cols-2 min-[500px]:grid-cols-3 border border-solid border-light rounded">
-        {logos?.map((logo, i, arr) => (
+        {data?.logos?.map((logo, i, arr) => (
           <div
             key={`stack-item-${i}`}
             className={`${

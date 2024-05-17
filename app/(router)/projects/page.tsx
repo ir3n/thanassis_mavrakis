@@ -1,5 +1,6 @@
 import ProjectTeaser from "@/components/Projects/ProjectTeaser";
 import ShowAnimation from "@/components/ShowAnimation";
+import Title from "@/components/Typography/Title";
 
 import data from "@/data/projectListing.json";
 
@@ -8,8 +9,10 @@ export default function Projects() {
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] md:pb-[400px] lg:pb-[500px]">
-      <ShowAnimation animation={"fromBelow"}>
-        <h1 className="title-lg mb-[100px] lg:mb-[200px]">{title}</h1>
+      <ShowAnimation>
+        <Title size="lg">
+          <h1 className="mb-[100px] lg:mb-[200px]">{title}</h1>
+        </Title>
       </ShowAnimation>
 
       <div className="md:grid md:grid-cols-2 gap-y-[100px] md:gap-x-[100px] lg:gap-x-[190px]">

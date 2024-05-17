@@ -5,18 +5,20 @@ import "keen-slider/keen-slider.min.css";
 
 import ServiceItem from "./ServiceItem";
 import ShowAnimation from "../ShowAnimation";
+import Title from "../Typography/Title";
 
 import data from "@/data/services.json";
 
 const Services = () => {
   const { title, services } = data;
 
-  const animation = { duration: 30000, easing: (t: number) => t };
+  const animation = { duration: 35000, easing: (t: number) => t };
 
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
     renderMode: "performance",
+    rubberband: false,
     slides: {
       perView: "auto",
       spacing: 20,
@@ -39,9 +41,11 @@ const Services = () => {
 
   return (
     <div className="pt-[40px] xl:pt-[100px] pb-[80px] lg:pb-[150px] xl:pb-[250px]">
-      <h2 className="container title mb-[40px] lg:mb-[100px]">
-        <ShowAnimation animation="fromBelow">{title}</ShowAnimation>
-      </h2>
+      <ShowAnimation>
+        <Title>
+          <h2 className="container mb-[40px] lg:mb-[100px]">{title}</h2>
+        </Title>
+      </ShowAnimation>
       <div
         className="keen-slider items-stretch"
         ref={sliderRef}

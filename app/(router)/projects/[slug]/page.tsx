@@ -5,6 +5,7 @@ import ThreeImages from "@/components/Projects/ProjectPage/ThreeImages";
 import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
 import ShowAnimation from "@/components/ShowAnimation";
 import allProjects from "@/data/fullProjects.json";
+import Title from "@/components/Typography/Title";
 
 import projectTeasers from "@/data/projectListing.json";
 
@@ -33,8 +34,10 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
-      <ShowAnimation animation="fromBelow">
-        <h1 className="project-title mb-[40px] lg:mb-[125px]">{data?.title}</h1>
+      <ShowAnimation>
+        <Title size="project">
+          <h1 className="mb-[40px] lg:mb-[125px]">{data?.title}</h1>
+        </Title>
       </ShowAnimation>
 
       <section className="mb-[60px] lg:mb-[250px]">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ShowAnimation from "../../ShowAnimation";
+import Text from "@/components/Typography/Text";
 
 type Props = { text: string; image: ImageType };
 
@@ -8,10 +9,12 @@ function HalfImageHalfText({ text, image }: Props) {
     <div className="md:flex md:items-center">
       <div className="flex-1 pr-[20px]">
         <ShowAnimation animation="fromBelow">
-          <div
-            className="font-body text-lg max-w-[645px] mb-[60px] md:mb-0"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></div>
+          <Text size="lg">
+            <div
+              className="max-w-[645px] mb-[60px] md:mb-0"
+              dangerouslySetInnerHTML={{ __html: text }}
+            ></div>
+          </Text>
         </ShowAnimation>
       </div>
       <div className="flex-1 ">
