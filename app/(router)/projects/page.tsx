@@ -1,5 +1,5 @@
 import ProjectTeaser from "@/components/Projects/ProjectTeaser";
-import ShowAnimation from "@/components/ShowAnimation/ShowOnScroll";
+import ShowAnimation from "@/components/Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
 import data from "@/data/projectListing.json";

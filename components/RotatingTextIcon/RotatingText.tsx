@@ -1,19 +1,27 @@
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
+import { useRef } from "react";
+import { useGsap } from "@/hooks/useGsap";
 
 function RotatingText({ title }: { title: string }) {
   const rotatingRef = useRef(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    const elementToAnimate = rotatingRef?.current;
+  const gsapSettings = {
+    scrollTriggerEl: rotatingRef,
+    elRef: rotatingRef,
+    start: "top bottom",
+    fromObj: {
+      rotation: "0",
+      ease: "none",
+      repeat: -1,
+    },
+    toObj: {
+      rotation: "360",
+      ease: "none",
+      duration: 6,
+      repeat: -1,
+    },
+  };
 
-    tl.fromTo(
-      elementToAnimate,
-      { rotation: "0", ease: "none", repeat: -1 },
-      { rotation: "360", ease: "none", duration: 6, repeat: -1 }
-    );
-  }, []);
+  useGsap({ ...gsapSettings });
 
   return (
     <svg

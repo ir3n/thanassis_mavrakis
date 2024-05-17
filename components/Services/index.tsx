@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 import ServiceItem from "./ServiceItem";
-import ShowAnimation from "../ShowAnimation/ShowOnScroll";
+import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 
 import data from "@/data/services.json";

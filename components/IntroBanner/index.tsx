@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CircleButton from "../Buttons/CircleButton";
 import LinkDesktopNolinkMobile from "../LinkDesktopNolinkMobile";
-import ShowAnimation from "../ShowAnimation/ShowOnScroll";
+import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 

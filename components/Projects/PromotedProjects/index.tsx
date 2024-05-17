@@ -1,6 +1,6 @@
 import ProjectTeaser from "../ProjectTeaser";
 import CircleButton from "../../Buttons/CircleButton";
-import ShowAnimation from "../../ShowAnimation/ShowOnScroll";
+import ShowAnimation from "../../Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
 import data from "@/data/promotedProjects.json";
