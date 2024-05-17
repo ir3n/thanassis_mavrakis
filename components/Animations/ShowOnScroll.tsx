@@ -6,7 +6,7 @@ import { useGsap } from "@/hooks/useGsap";
 function ShowOnScroll({
   children,
   animation = "fromBelow",
-  delay = 0,
+  index = 0,
   full,
 }: AnimationType) {
   const ref = useRef(null);
@@ -23,7 +23,7 @@ function ShowOnScroll({
       opacity: 1,
       transform: "none",
       duration: 1,
-      delay: delay / 5,
+      delay: index / 5,
     },
   };
 

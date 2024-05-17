@@ -16,7 +16,7 @@ const FreeTimeGrid = () => {
                 <h2 className="mb-[20px] lg:mb-[40px]">{data?.title}</h2>
               </Title>
             </ShowAnimation>
-            <ShowAnimation delay={1}>
+            <ShowAnimation index={1}>
               <Text>
                 <div dangerouslySetInnerHTML={{ __html: data?.text }}></div>
               </Text>
@@ -32,15 +32,13 @@ const FreeTimeGrid = () => {
                 : "col-span-1 h-[220px] md:h-[15rem] lg:h-[27rem]"
             } ${i === 1 && "col-span-2 md:col-span-1"}`}
           >
-            <ShowAnimation animation="popIn" delay={i} full={true}>
+            <ShowAnimation animation="popIn" index={i} full={true}>
               <div className="relative w-full h-full rounded">
                 <Image
                   src={el.image}
                   fill
                   alt={el.name}
-                  style={{
-                    objectFit: "cover",
-                  }}
+                  className="object-cover"
                 />
               </div>
             </ShowAnimation>

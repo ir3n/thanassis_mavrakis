@@ -31,7 +31,7 @@ const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
               <h1 className="mb-[30px]">{title}</h1>
             </Title>
           </ShowAnimation>
-          <ShowAnimation delay={1}>
+          <ShowAnimation index={1}>
             <Text size="lg">
               <div
                 className="max-w-[635px]"
@@ -49,14 +49,14 @@ const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
 
       {image ? (
         <div className="my-[-50px] lg:my-0 lg:absolute lg:right-[50px] lg:bottom-[-20px] lg:w-5/12 max-w-[245px] lg:max-w-full">
-          <ShowAnimation animation="fromBelow" delay={2}>
+          <ShowAnimation animation="fromBelow" index={2}>
             <Image
               src={image?.src}
               width={675}
               height={815}
               alt={image?.alt}
-              style={{ marginLeft: "auto" }}
               loading="eager"
+              className="ml-auto"
             />
           </ShowAnimation>
         </div>

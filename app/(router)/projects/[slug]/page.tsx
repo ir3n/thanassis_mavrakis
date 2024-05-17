@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: Params }) {
         </Title>
       </ShowAnimation>
 
-      <section className="mb-[60px] lg:mb-[250px]">
+      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
         <ProjectBanner
           title={data?.title ?? ""}
           link={data?.link ?? "#"}
@@ -50,14 +50,14 @@ export default async function Page({ params }: { params: Params }) {
         />
       </section>
 
-      <section className="mb-[60px] lg:mb-[250px]">
+      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
         <HalfImageHalfText
           text={data?.text ?? ""}
           image={data?.halfImage ?? { src: "", alt: "" }}
         />
       </section>
 
-      <section className="mb-[60px] lg:mb-[250px]">
+      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
         <TwoImages images={data?.twoImages ?? []} />
         <ThreeImages images={data?.threeImages ?? []} />
       </section>

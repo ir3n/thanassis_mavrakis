@@ -23,7 +23,7 @@ const Contact = () => {
                 <div className="text-accent lg:mb-[20px]">{subtitle}</div>
               </Text>
             </ShowAnimation>
-            <ShowAnimation delay={1}>
+            <ShowAnimation index={1}>
               <Title>
                 <h2 className="mb-[50px] lg:mb-[100px]">{title}</h2>
               </Title>
@@ -35,7 +35,7 @@ const Contact = () => {
                     key={`social-${item?.name}`}
                     className="mr-[25px] lg:mr-[45px]"
                   >
-                    <ShowAnimation animation="popIn" delay={i}>
+                    <ShowAnimation animation="popIn" index={i}>
                       <SocialLink
                         name={item?.name}
                         image={item?.image}

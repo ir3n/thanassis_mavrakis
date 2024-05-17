@@ -7,6 +7,7 @@ import CircleButton from "../../Buttons/CircleButton";
 import Text from "@/components/Typography/Text";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
+import { useGsap } from "@/hooks/useGsap";
 
 type Props = {
   title: string;
@@ -19,19 +20,38 @@ type Props = {
 function ProjectBanner({ title, link, date, services, banner }: Props) {
   const desk = useWindowWidth() > 1024;
 
-  const ref = useRef(null);
+  const parentRef = useRef(null);
+  const innerRef = useRef(null);
+
+  // const gsapSettings = {
+  //   scrollTriggerEl: parentRef,
+  //   elRef: innerRef,
+  //   start: "50% bottom",
+  //   fromObj: {
+  //     x: "50%",
+  //     opacity: 0,
+  //   },
+  //   toObj: {
+  //     x: "0%",
+  //     opacity: 1,
+  //     duration: 1,
+  //   },
+  // };
+
+  // useGsap({ ...gsapSettings });
 
   return (
-    <div ref={ref}>
+    <div>
       <LinkDesktopNolinkMobile
         url={link || "#"}
         text={link ? "Visit site" : ""}
       >
         <div
+          ref={parentRef}
           className={"bg-secondary rounded flex flex-col-reverse md:flex-row"}
         >
           <div
-            className={`p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-1/3 transition duration-[2500ms] `}
+            className={`p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-1/3`}
           >
             <div className="text-[0.75rem] lg:text-[1.125rem] font-light font-body">
               {date}
@@ -49,19 +69,19 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
                 ))}
               </div>
               {!desk && (
-                <div className="w-fit ml-4 md:ml-0 md:mt-8">
+                <div className="w-fit ml-4 md:ml-0 md:mt-8 lg:hidden">
                   <CircleButton text={"Visit site"} url={link} filled={true} />
                 </div>
               )}
             </div>
           </div>
-          <div className="rounded md:w-2/3 relative z-1">
+          <div ref={innerRef} className="rounded md:w-2/3 relative z-1 ">
             <Image
               src={banner}
               width={1053}
               height={644}
               alt={title}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

@@ -11,7 +11,7 @@ const Copyrights = () => {
             {`© ${new Date().getFullYear()} All rights reserved`}
           </p>
         </ShowAnimation>
-        <ShowAnimation animation="fromBelow" delay={1}>
+        <ShowAnimation animation="fromBelow" index={1}>
           <p>
             <span>Designed by Thanassis Mavrakis.</span>{" "}
             <span className="block md:inline-block mt-[5px]">

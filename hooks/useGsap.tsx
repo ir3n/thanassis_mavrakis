@@ -1,12 +1,10 @@
 "use client";
 
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, MutableRefObject } from "react";
 import { usePathname } from "next/navigation";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-import { MutableRefObject } from "react";
 
 interface GsapType {
   scrollTriggerEl?: MutableRefObject<null>;
@@ -34,19 +32,20 @@ export const useGsap = ({
   const path = usePathname();
 
   useLayoutEffect(() => {
+    if (!elRef.current) return;
+
     let ctx = gsap.context(() => {
-      let timeline = gsap.timeline({
+      gsap.fromTo(elRef.current, fromObj, {
+        ...toObj,
         scrollTrigger: {
           trigger: scrollTriggerEl ? scrollTriggerEl.current : elRef.current,
           start: start,
-          end: end || "",
+          end: end || "bottom top",
           scrub: scrub || false,
         },
       });
-
-      timeline.fromTo(elRef.current, fromObj, toObj);
     });
 
     return () => ctx.revert();
-  }, [path]);
+  }, [path, scrollTriggerEl, elRef, start, end, scrub, fromObj, toObj]);
 };

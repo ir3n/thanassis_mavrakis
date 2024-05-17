@@ -11,6 +11,6 @@ interface LinkType {
 interface AnimationType {
   children: React.ReactNode;
   animation?: "fromBelow" | "popIn" = "fromBelow";
-  delay?: number = 0;
+  index?: number = 0;
   full?: boolean;
 }

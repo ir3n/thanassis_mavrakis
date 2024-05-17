@@ -17,8 +17,8 @@ function BrushStroke({ image, className, width, height }: Props) {
         alt="Brush stroke"
         width={width}
         height={height}
-        style={{ width: "100%" }}
         loading="eager"
+        className="w-full"
       />
     </div>
   );

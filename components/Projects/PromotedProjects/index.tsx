@@ -28,7 +28,7 @@ const PromotedProjects = () => {
       </div>
       <div className="md:flex gap-[50px] lg:gap-[90px] justify-between">
         {promotedProjects?.map((proj, i) => (
-          <ShowAnimation animation="popIn" delay={i}>
+          <ShowAnimation animation="popIn" index={i}>
             <ProjectTeaser
               key={`project-${i}`}
               link={`/projects/${proj?.id}`}

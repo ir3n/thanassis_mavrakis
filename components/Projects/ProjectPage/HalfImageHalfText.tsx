@@ -18,7 +18,7 @@ function HalfImageHalfText({ text, image }: Props) {
         </ShowAnimation>
       </div>
       <div className="flex-1 ">
-        <ShowAnimation animation="fromBelow" delay={1}>
+        <ShowAnimation animation="fromBelow" index={1}>
           <div className="rounded">
             <Image src={image?.src} width={820} height={479} alt={image?.alt} />
           </div>

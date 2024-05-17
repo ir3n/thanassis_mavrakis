@@ -40,7 +40,7 @@ export default function RootLayout({
                 width={1920}
                 height={1080}
                 alt="Background noise"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                className="w-full h-full object-cover"
               />
             </div>
             <BrushStroke
