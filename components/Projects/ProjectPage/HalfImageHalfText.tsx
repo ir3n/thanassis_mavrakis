@@ -7,7 +7,7 @@ type Props = { text: string; image: ImageType };
 function HalfImageHalfText({ text, image }: Props) {
   return (
     <div className="md:flex md:items-center">
-      <div className="flex-1 pr-[20px]">
+      <div className="flex-1 md:pr-[20px] lg:pr-[40px]">
         <ShowAnimation animation="fromBelow">
           <Text size="lg">
             <div

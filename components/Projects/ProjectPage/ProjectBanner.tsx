@@ -19,26 +19,25 @@ type Props = {
 
 function ProjectBanner({ title, link, date, services, banner }: Props) {
   const desk = useWindowWidth() > 1024;
+  const mobile = useWindowWidth() < 768;
 
   const parentRef = useRef(null);
   const innerRef = useRef(null);
 
-  // const gsapSettings = {
-  //   scrollTriggerEl: parentRef,
-  //   elRef: innerRef,
-  //   start: "50% bottom",
-  //   fromObj: {
-  //     x: "50%",
-  //     opacity: 0,
-  //   },
-  //   toObj: {
-  //     x: "0%",
-  //     opacity: 1,
-  //     duration: 1,
-  //   },
-  // };
+  const gsapSettings = {
+    scrollTriggerEl: parentRef,
+    elRef: innerRef,
+    start: "50% bottom",
+    fromObj: {
+      width: "100%",
+    },
+    toObj: {
+      width: mobile ? "100%" : "65%",
+      duration: 1,
+    },
+  };
 
-  // useGsap({ ...gsapSettings });
+  useGsap({ ...gsapSettings });
 
   return (
     <div>
@@ -48,17 +47,19 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
       >
         <div
           ref={parentRef}
-          className={"bg-secondary rounded flex flex-col-reverse md:flex-row"}
+          className={
+            "bg-secondary md:bg-transparent relative rounded flex flex-col-reverse md:flex-row lg:min-h-[450px] xl:min-h-[640px]"
+          }
         >
           <div
-            className={`p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-1/3`}
+            className={`md:bg-secondary p-[20px] pb-[40px] lg:p-[40px] xl:p-[60px] md:w-[40%] md:flex md:flex-col`}
           >
             <div className="text-[0.75rem] lg:text-[1.125rem] font-light font-body">
               {date}
             </div>
-            <div className="flex items-end md:block">
+            <div className="flex items-end md:block mt-[30px] lg:mt-auto lg:h-[65%]">
               <div className="flex-1">
-                <h2 className="mt-[30px] lg:mt-[50px] min-[1300px]:mt-[145px] font-heading text-[1.75rem] lg:text-[3rem] xl:text-[4rem] mb-[15px]">
+                <h2 className="font-heading text-[1.75rem] lg:text-[3rem] xl:text-[4rem] mb-[15px]">
                   Services
                 </h2>
 
@@ -75,12 +76,16 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
               )}
             </div>
           </div>
-          <div ref={innerRef} className="rounded md:w-2/3 relative z-1 ">
+          <div
+            ref={innerRef}
+            className="rounded relative w-full md:absolute md:right-0 z-1 h-full"
+          >
             <Image
               src={banner}
-              width={1053}
-              height={644}
+              width={1600}
+              height={978}
               alt={title}
+              loading="eager"
               className="w-full h-full object-cover"
             />
           </div>
