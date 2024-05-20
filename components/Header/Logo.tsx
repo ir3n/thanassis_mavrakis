@@ -4,7 +4,7 @@ import Image from "next/image";
 const Logo = () => {
   return (
     <div className="block max-w-[62px] md:max-w-[85px] relative z-50">
-      <Link href="/" data-cursor="-scale">
+      <Link href="/">
         <div magnetic-element="true">
           <Image
             src="/images/logo.svg"

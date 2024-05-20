@@ -22,7 +22,7 @@ const Home = () => {
           linkText={linkText}
         />
         <div className="hidden lg:block xxl:mt-[100px] w-fit mx-auto">
-          <Link href={`#projects`} data-cursor="-scale">
+          <Link href={`#projects`}>
             <RotatingTextIcon name="scrolldown">
               <ArrowDown size={68} color="white" />
             </RotatingTextIcon>

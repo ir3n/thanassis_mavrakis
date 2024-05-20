@@ -20,7 +20,6 @@ const Copyrights = () => {
                 href="https://www.ireneborada.com"
                 target="_blank"
                 className="transition duration-500"
-                data-cursor="-scale"
               >
                 Irene Borada.
               </Link>
