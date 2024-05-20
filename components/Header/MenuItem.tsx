@@ -13,7 +13,7 @@ const MenuItem = ({ link, name }: LinkType) => {
 
   const linkRef = useRef(null);
 
-  const active = useIsActive(linkRef);
+  const active = useIsActive(link);
 
   return (
     <Link

@@ -1,24 +1,19 @@
 "use client";
 
-import { RefObject, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-export const useIsActive = (
-  elementRef: RefObject<HTMLAnchorElement>
-): boolean => {
+export const useIsActive = (link: string): boolean => {
   const [active, setActive] = useState(false);
-
   const path = usePathname();
 
   useEffect(() => {
-    if (!elementRef) {
+    if (!link) {
       return;
     }
 
-    const link = elementRef.current;
-
-    setActive(link?.href.includes(path) as boolean);
-  }, [elementRef, path]);
+    setActive(link === path);
+  }, [link, path]);
 
   return active;
 };
