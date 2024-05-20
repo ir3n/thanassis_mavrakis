@@ -11,7 +11,7 @@ function GhostButton({ link, name }: LinkType) {
   const [hover, setHover] = useState(false);
 
   return (
-    <div magnetic-element="true" data-cursor="-opacity">
+    <div magnetic-element="true" data-cursor="-opacity" className="w-fit">
       <Text size="lg">
         <Link
           href={link}

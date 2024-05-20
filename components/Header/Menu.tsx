@@ -30,7 +30,11 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
         </ul>
       </nav>
 
-      {cta && <GhostButton link={cta?.link} name={cta?.name} />}
+      {cta && (
+        <div className="flex justify-center md:block">
+          <GhostButton link={cta?.link} name={cta?.name} />
+        </div>
+      )}
 
       <div className="md:hidden absolute bottom-0 left-0 right-0 z-[-1]">
         <Image
