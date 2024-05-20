@@ -4,17 +4,32 @@ import Services from "@/components/Services";
 import TableWithLogos from "@/components/TableWithLogos";
 import IntroBanner from "@/components/IntroBanner";
 
-import data from "@/data/aboutIntro.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const About = () => {
+type AboutData = {
+  title: string;
+  text: string;
+  image: ImageType;
+  marquee: string[];
+};
+
+async function getData() {
+  const data = await getLocalData("aboutIntro");
+
+  return data;
+}
+
+const About = async () => {
+  const data: AboutData = await getData();
   const { title, text, image, marquee } = data;
+
   return (
     <>
       <section className="full-height-section">
         <div className="container">
           <IntroBanner title={title} text={text} image={image} />
         </div>
-        <Marquee text={marquee} />
+        {marquee && <Marquee text={marquee} />}
       </section>
       <section>
         <Services />

@@ -2,12 +2,7 @@ import Image from "next/image";
 import ShowAnimation from "../Animations/ShowOnScroll";
 import Text from "../Typography/Text";
 
-type LogoProps = {
-  name: string;
-  icon: string;
-  text: string;
-};
-const LogoItem = ({ name, icon, text }: LogoProps) => {
+const LogoItem = ({ name, icon, text }: StackItemType) => {
   return (
     <div
       className="flex pt-[30px] lg:pt-[80px] pb-[30px] lg:pb-[40px] px-[20px] lg:grayscale hover:grayscale-0 transition duration-500"

@@ -1,11 +1,21 @@
 import Image from "next/image";
 
-import data from "@/data/freeTime.json";
 import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 
-const FreeTimeGrid = () => {
+import { getLocalData } from "@/services/getLocalData";
+
+type FreeTimeData = {
+  title: string;
+  text: string;
+  images: ImageType[];
+};
+
+const FreeTimeGrid = async () => {
+  const data: FreeTimeData = await getLocalData("freeTime");
+  const { title, text, images } = data;
+
   return (
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-[15px] lg:gap-[40px]">
@@ -13,17 +23,17 @@ const FreeTimeGrid = () => {
           <div className="h-full flex flex-col justify-center ">
             <ShowAnimation>
               <Title>
-                <h2 className="mb-[20px] lg:mb-[40px]">{data?.title}</h2>
+                <h2 className="mb-[20px] lg:mb-[40px]">{title}</h2>
               </Title>
             </ShowAnimation>
             <ShowAnimation index={1}>
               <Text size="lg">
-                <div dangerouslySetInnerHTML={{ __html: data?.text }}></div>
+                <div dangerouslySetInnerHTML={{ __html: text }}></div>
               </Text>
             </ShowAnimation>
           </div>
         </div>
-        {data?.images?.map((el, i) => (
+        {images?.map((el, i) => (
           <div
             key={`grid-images-${i}`}
             className={`rounded ${
@@ -35,9 +45,9 @@ const FreeTimeGrid = () => {
             <ShowAnimation animation="popIn" index={i} full={true}>
               <div className="relative w-full h-full rounded">
                 <Image
-                  src={el.image}
+                  src={el.src}
                   fill
-                  alt={el.name}
+                  alt={el.alt}
                   className="object-cover"
                 />
               </div>

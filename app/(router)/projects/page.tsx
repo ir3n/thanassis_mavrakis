@@ -2,9 +2,21 @@ import ProjectTeaser from "@/components/Projects/ProjectTeaser";
 import ShowAnimation from "@/components/Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
-import data from "@/data/projectListing.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const Projects = () => {
+type ProjectListing = {
+  title: string;
+  projects: ProjTeaser[];
+};
+
+async function getData() {
+  const data = await getLocalData("projectListing");
+
+  return data;
+}
+
+const Projects = async () => {
+  const data: ProjectListing = await getData();
   const { title, projects } = data;
 
   return (
@@ -25,7 +37,7 @@ const Projects = () => {
           >
             <ShowAnimation animation={"popIn"}>
               <ProjectTeaser
-                link={`/projects/${proj?.id}`}
+                id={proj?.id}
                 image={proj?.image}
                 subtitle={proj?.subtitle}
                 title={proj?.title}

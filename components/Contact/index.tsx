@@ -1,5 +1,3 @@
-"use client";
-
 import SocialLink from "./SocialLink";
 import CircleButton from "../Buttons/CircleButton";
 import ShowAnimation from "../Animations/ShowOnScroll";
@@ -7,9 +5,17 @@ import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 import FromCircleToFull from "../Animations/FromCircleToFull";
 
-import data from "@/data/footer.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const Contact = () => {
+type ContactType = {
+  subtitle: string;
+  title: string;
+  button: LinkType;
+  social: Social[];
+};
+
+const Contact = async () => {
+  const data: ContactType = await getLocalData("footer");
   const { subtitle, title, button, social } = data;
 
   return (
@@ -30,7 +36,7 @@ const Contact = () => {
             </ShowAnimation>
             <div className="flex items-center">
               <ul className="flex">
-                {social?.map((item, i) => (
+                {social?.map((item: Social, i) => (
                   <li
                     key={`social-${item?.name}`}
                     className="mr-[25px] lg:mr-[45px]"
@@ -48,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="absolute md:relative bottom-0 md:bottom-auto">
-            <CircleButton text={button?.title} url={button?.link} />
+            <CircleButton text={button?.name} url={button?.link} />
           </div>
         </div>
       </div>

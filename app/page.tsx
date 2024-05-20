@@ -1,26 +1,34 @@
 import Link from "next/link";
 
-import IntroBanner from "@/components/IntroBanner";
 import { ArrowDown } from "lucide-react";
+
+import IntroBanner from "@/components/IntroBanner";
 import RotatingTextIcon from "@/components/RotatingTextIcon";
 import Projects from "@/components/Projects/PromotedProjects";
-
 import Services from "@/components/Services";
 
-import homeIntro from "@/data/homeIntro.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const Home = () => {
-  const { title, text, link, linkText } = homeIntro;
+type HomeData = {
+  title: string;
+  text: string;
+  link: LinkType;
+};
+
+async function getData() {
+  const data = await getLocalData("homeIntro");
+
+  return data;
+}
+
+const Home = async () => {
+  const data: HomeData = await getData();
+  const { title, text, link } = data;
 
   return (
     <>
       <section className="container full-height-section">
-        <IntroBanner
-          title={title}
-          text={text}
-          link={link}
-          linkText={linkText}
-        />
+        <IntroBanner title={title} text={text} link={link} />
         <div className="hidden lg:block xxl:mt-[100px] w-fit mx-auto">
           <Link href={`#projects`} aria-label="Scroll down">
             <RotatingTextIcon name="scrolldown">

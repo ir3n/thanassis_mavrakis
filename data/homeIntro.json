@@ -1,6 +1,5 @@
 {
   "title": "UI/UX Designer",
   "text": "Hello, I am Thanassis Mavrakis. A UI/UX Designer and No-Code Developer creating beautiful, user-friendly websites.",
-  "link": "/about",
-  "linkText": "About me"
+  "link": { "link": "/about", "name": "About me" }
 }

@@ -9,18 +9,17 @@ type IntroData = {
   title: string;
   text: string;
   image?: ImageType;
-  link?: string;
-  linkText?: string;
+  link?: LinkType;
 };
 
-const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
+const IntroBanner = ({ title, text, image, link }: IntroData) => {
   return (
     <div
       className={`relative ${
         image ? "flex flex-col-reverse lg:block" : "block"
       }`}
     >
-      <LinkDesktopNolinkMobile url={link} text={linkText || ""}>
+      <LinkDesktopNolinkMobile url={link?.link} text={link?.name || ""}>
         <div
           className={`pb-[35px] lg:pb-[100px] ${
             image && "lg:w-1/2 lg:max-w-[636px]"
@@ -43,7 +42,7 @@ const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
       </LinkDesktopNolinkMobile>
       {link ? (
         <div className="lg:hidden">
-          <CircleButton text={linkText || "View"} url={link} />
+          <CircleButton text={link?.name || "View"} url={link?.link} />
         </div>
       ) : null}
 

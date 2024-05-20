@@ -2,18 +2,26 @@ import LogoItem from "./LogoItem";
 import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 
-import data from "@/data/stack.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const TableWithLogos = () => {
+type StackType = {
+  title: string;
+  logos: StackItemType[];
+};
+
+const TableWithLogos = async () => {
+  const data: StackType = await getLocalData("stack");
+  const { title, logos } = data;
+
   return (
     <div className="container">
       <ShowAnimation>
         <Title>
-          <h2 className="mb-[40px] lg:mb-[100px]">{data?.title}</h2>
+          <h2 className="mb-[40px] lg:mb-[100px]">{title}</h2>
         </Title>
       </ShowAnimation>
       <div className="grid grid-cols-2 min-[500px]:grid-cols-3 border border-solid border-light rounded">
-        {data?.logos?.map((logo, i, arr) => (
+        {logos?.map((logo, i, arr) => (
           <div
             key={`stack-item-${i}`}
             className={`${

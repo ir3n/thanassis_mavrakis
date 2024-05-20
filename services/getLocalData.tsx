@@ -1,3 +1,4 @@
+// only use this in SERVER components
 import { promises as fs } from "fs";
 
 export const getLocalData = async (fileName: string) => {

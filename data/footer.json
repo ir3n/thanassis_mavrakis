@@ -2,8 +2,8 @@
   "subtitle": "Do you have a project in mind?",
   "title": "Let’s work together",
   "button": {
-    "title": "Get in touch",
-    "link": "mailto:thanassis.mavrakis@gmail.com"
+    "link": "mailto:thanassis.mavrakis@gmail.com",
+    "name": "Get in touch"
   },
   "social": [
     {

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import data from "@/data/header.json";
 import MenuItem from "./MenuItem";
 import GhostButton from "../Buttons/GhostButton";
 import Text from "../Typography/Text";
+
+import data from "@/data/header.json";
 
 const Menu = ({ openMenu }: { openMenu: boolean }) => {
   const { menu, cta } = data;

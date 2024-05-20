@@ -3,20 +3,20 @@
   "text": "When I'm not designing, I'm hanging out with my best friend Rukia. I also enjoy playing and making music, watching anime, and practicing karate.",
   "images": [
     {
-      "image": "/images/free-time/rukia.png",
-      "name": "Rukia"
+      "src": "/images/free-time/rukia.png",
+      "alt": "Rukia"
     },
     {
-      "image": "/images/free-time/guitar.png",
-      "name": "Guitar"
+      "src": "/images/free-time/guitar.png",
+      "alt": "Guitar"
     },
     {
-      "image": "/images/free-time/anime.png",
-      "name": "Anime"
+      "src": "/images/free-time/anime.png",
+      "alt": "Anime"
     },
     {
-      "image": "/images/free-time/karate.png",
-      "name": "Karate"
+      "src": "/images/free-time/karate.png",
+      "alt": "Karate"
     }
   ]
 }

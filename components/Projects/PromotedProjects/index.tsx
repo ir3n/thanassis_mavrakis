@@ -3,14 +3,16 @@ import CircleButton from "../../Buttons/CircleButton";
 import ShowAnimation from "../../Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
-import data from "@/data/promotedProjects.json";
-import projectListing from "@/data/projectListing.json";
+import { getLocalData } from "@/services/getLocalData";
 
-const PromotedProjects = () => {
+const PromotedProjects = async () => {
+  const data = await getLocalData("promotedProjects");
   const { title, button, projects } = data;
+
+  const projectListing = await getLocalData("projectListing");
   const allProjects = projectListing?.projects;
 
-  const promotedProjects = allProjects?.filter((proj) =>
+  const promotedProjects = allProjects?.filter((proj: ProjTeaser) =>
     projects.includes(proj.id)
   );
 
@@ -27,11 +29,10 @@ const PromotedProjects = () => {
         </div>
       </div>
       <div className="md:flex gap-[50px] lg:gap-[90px] justify-between">
-        {promotedProjects?.map((proj, i) => (
-          <ShowAnimation animation="popIn" index={i}>
+        {promotedProjects?.map((proj: ProjTeaser, i: number) => (
+          <ShowAnimation animation="popIn" index={i} key={`project-${i}`}>
             <ProjectTeaser
-              key={`project-${i}`}
-              link={`/projects/${proj?.id}`}
+              id={proj?.id}
               image={proj?.image}
               subtitle={proj?.subtitle}
               title={proj?.title}

@@ -28,8 +28,6 @@ type ProjectTeaser = {
   link: string;
 };
 
-type Params = { slug: string };
-
 type Props = {
   project: Project;
   nextProject: NextProject | null;
