@@ -17,7 +17,7 @@ const FreeTimeGrid = () => {
               </Title>
             </ShowAnimation>
             <ShowAnimation index={1}>
-              <Text>
+              <Text size="lg">
                 <div dangerouslySetInnerHTML={{ __html: data?.text }}></div>
               </Text>
             </ShowAnimation>

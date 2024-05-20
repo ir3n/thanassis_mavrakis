@@ -15,7 +15,7 @@ const Text = ({ children, size = "normal" }: TextType) => {
       classes = "text-[0.875rem] lg:text-[1rem] leading-[1.3] font-light";
       break;
     default:
-      classes = "lg:text-[1rem] leading-[1.4]";
+      classes = "lg:text-[1.125rem] leading-[1.4]";
   }
 
   return <div className={`font-body text ${classes}`}>{children}</div>;

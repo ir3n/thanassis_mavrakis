@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.thanassis-mavrakis.com"),
   title: "Thanassis Mavrakis | UI/UX Designer, No-code Developer",
   description:
-    "UI/UX designer and No-code developer creating beautiful websites that are easy to use and accessible to everyone.",
+    "UI/UX Designer and No-Code Developer creating beautiful, user-friendly websites.",
   openGraph: {
     images: "/opengraph-image.png",
   },
