@@ -4,11 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-interface Social {
+type Social = {
   name: string;
   image: string;
   link: string;
-}
+};
 
 const SocialLink = ({ name, image, link }: Social) => {
   const [hover, setHover] = useState(false);

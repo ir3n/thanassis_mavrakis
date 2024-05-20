@@ -4,11 +4,11 @@ import Link from "next/link";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-interface Props {
+type Props = {
   url?: string;
   text: string;
   children: React.ReactNode;
-}
+};
 
 const LinkDesktopNolinkMobile = ({ url, text, children }: Props) => {
   const isDesk = useWindowWidth() > 1024;

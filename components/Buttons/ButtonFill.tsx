@@ -1,9 +1,9 @@
 import React from "react";
 
-interface Props {
+type Props = {
   show: boolean;
   color?: "white" | "accent";
-}
+};
 
 const ButtonFill = ({ show, color = "white" }: Props) => {
   const background = color === "accent" ? "bg-accent" : "bg-white";

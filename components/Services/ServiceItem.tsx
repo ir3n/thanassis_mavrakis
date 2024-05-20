@@ -1,9 +1,9 @@
 import Text from "../Typography/Text";
 
-interface ServiceItem {
+type ServiceItem = {
   title: string;
   text: string;
-}
+};
 
 const ServiceItem = ({ title, text }: ServiceItem) => {
   return (

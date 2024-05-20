@@ -9,13 +9,7 @@ import ShowOnScroll from "@/components/Animations/ShowOnScroll";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-type Props = {
-  id: string;
-  title: string;
-  image: ImageType;
-};
-
-const NextProject = ({ project }: { project: Props }) => {
+const NextProject = ({ project }: { project: NextProject }) => {
   const desk = useWindowWidth() > 1024;
 
   return (

@@ -2,11 +2,11 @@ import Image from "next/image";
 import ShowAnimation from "../Animations/ShowOnScroll";
 import Text from "../Typography/Text";
 
-interface LogoProps {
+type LogoProps = {
   name: string;
   icon: string;
   text: string;
-}
+};
 const LogoItem = ({ name, icon, text }: LogoProps) => {
   return (
     <div

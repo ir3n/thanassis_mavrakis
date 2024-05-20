@@ -5,13 +5,13 @@ import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 
-interface IntroData {
+type IntroData = {
   title: string;
   text: string;
   image?: ImageType;
   link?: string;
   linkText?: string;
-}
+};
 
 const IntroBanner = ({ title, text, image, link, linkText }: IntroData) => {
   return (

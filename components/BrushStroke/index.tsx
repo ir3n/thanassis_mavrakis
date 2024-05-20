@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 
-interface Props {
+type Props = {
   image: string;
   className: string;
   width: number;
   height: number;
-}
+};
 
 const BrushStroke = ({ image, className, width, height }: Props) => {
   return (

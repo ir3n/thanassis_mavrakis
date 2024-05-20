@@ -1,9 +1,9 @@
 import React from "react";
 
-interface Props {
+type Props = {
   text: string;
   hover: boolean;
-}
+};
 
 const ButtonText = ({ text, hover }: Props) => {
   return (

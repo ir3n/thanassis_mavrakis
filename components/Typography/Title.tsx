@@ -1,7 +1,7 @@
-interface TitleType {
+type TitleType = {
   children: React.ReactNode;
   size?: "lg" | "normal" | "project";
-}
+};
 
 const Title = ({ children, size = "normal" }: TitleType) => {
   let classes = "";

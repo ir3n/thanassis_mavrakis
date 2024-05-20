@@ -6,12 +6,12 @@ import Image from "next/image";
 
 import Text from "../Typography/Text";
 
-interface ProjTeaser {
+type ProjTeaser = {
   link: string;
   image: ImageType;
   subtitle: string;
   title: string;
-}
+};
 
 const ProjectTeaser = ({ link, image, subtitle, title }: ProjTeaser) => {
   const [hover, setHover] = useState(false);

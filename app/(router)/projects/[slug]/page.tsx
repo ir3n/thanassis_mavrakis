@@ -4,16 +4,44 @@ import ProjectBanner from "@/components/Projects/ProjectPage/ProjectBanner";
 import ThreeImages from "@/components/Projects/ProjectPage/ThreeImages";
 import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
 import ShowAnimation from "@/components/Animations/ShowOnScroll";
-import allProjects from "@/data/fullProjects.json";
 import Title from "@/components/Typography/Title";
 
-import projectTeasers from "@/data/projectListing.json";
+import { getLocalData } from "@/services/getLocalData";
+
+type Project = {
+  id: string;
+  title: string;
+  link: string;
+  date: string;
+  services: string[];
+  banner: string;
+  text: string;
+  halfImage: { src: string; alt: string };
+  twoImages: { src: string; alt: string }[];
+  threeImages: { src: string; alt: string }[];
+  nextProject: string;
+};
+
+type ProjectTeaser = {
+  id: string;
+  title: string;
+  link: string;
+};
 
 type Params = { slug: string };
 
+type Props = {
+  project: Project;
+  nextProject: NextProject | null;
+};
+
 export async function generateStaticParams() {
-  const ids = allProjects?.map((proj) => proj?.id);
-  const paths = ids?.map((id) => ({
+  const data = await getLocalData("fullProjects");
+
+  if (!data) return;
+
+  const ids = data?.map((proj: Project) => proj?.id);
+  const paths = ids?.map((id: string) => ({
     id: id,
   }));
 
@@ -21,47 +49,55 @@ export async function generateStaticParams() {
 }
 
 async function getPost(params: Params) {
-  const data = allProjects?.find((proj) => proj.id === params?.slug);
-  return data;
-}
-const Page = async ({ params }: { params: Params }) => {
-  const data = await getPost(params);
+  const projects = await getLocalData("fullProjects");
+  const project = projects?.find((proj: Project) => proj.id === params?.slug);
 
-  const next = projectTeasers?.projects?.find(
-    (proj) => proj.id === data?.nextProject
+  const projectTeasers = await getLocalData("projectListing");
+  const nextProject = projectTeasers?.projects?.find(
+    (proj: ProjectTeaser) => proj.id === project?.nextProject
   );
+
+  return {
+    project,
+    nextProject,
+  };
+}
+
+const Page = async ({ params }: { params: Params }) => {
+  const props: Props = await getPost(params);
+  const { project, nextProject } = props;
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
       <ShowAnimation>
         <Title size="project">
-          <h1 className="mb-[40px] lg:mb-[125px]">{data?.title}</h1>
+          <h1 className="mb-[40px] lg:mb-[125px]">{project?.title}</h1>
         </Title>
       </ShowAnimation>
 
       <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
         <ProjectBanner
-          title={data?.title ?? ""}
-          link={data?.link ?? "#"}
-          date={data?.date ?? ""}
-          services={data?.services ?? []}
-          banner={data?.banner ?? ""}
+          title={project?.title ?? ""}
+          link={project?.link ?? "#"}
+          date={project?.date ?? ""}
+          services={project?.services ?? []}
+          banner={project?.banner ?? ""}
         />
       </section>
 
       <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
         <HalfImageHalfText
-          text={data?.text ?? ""}
-          image={data?.halfImage ?? { src: "", alt: "" }}
+          text={project?.text ?? ""}
+          image={project?.halfImage ?? { src: "", alt: "" }}
         />
       </section>
 
       <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
-        <TwoImages images={data?.twoImages ?? []} />
-        <ThreeImages images={data?.threeImages ?? []} />
+        <TwoImages images={project?.twoImages ?? []} />
+        <ThreeImages images={project?.threeImages ?? []} />
       </section>
 
-      <section>{next && <NextProject project={next} />}</section>
+      <section>{nextProject && <NextProject project={nextProject} />}</section>
     </div>
   );
 };

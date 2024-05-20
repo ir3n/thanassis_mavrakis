@@ -1,16 +1,22 @@
 declare module "@toon.rombaut/magnetic-elements";
 
-interface ImageType {
+type ImageType = {
   src: string;
   alt: string;
-}
-interface LinkType {
+};
+type LinkType = {
   link: string;
   name: string;
-}
-interface AnimationType {
+};
+type AnimationType = {
   children: React.ReactNode;
   animation?: "fromBelow" | "popIn" = "fromBelow";
   index?: number = 0;
   full?: boolean;
-}
+};
+
+type NextProject = {
+  id: string;
+  title: string;
+  image: ImageType;
+};

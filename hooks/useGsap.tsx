@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-interface GsapType {
+type GsapType = {
   scrollTriggerEl?: MutableRefObject<null>;
   elRef: MutableRefObject<null>;
   start: string;
@@ -14,7 +14,7 @@ interface GsapType {
   scrub?: boolean;
   fromObj: GSAPTimelineVars;
   toObj: GSAPTimelineVars;
-}
+};
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);

@@ -5,11 +5,11 @@ import Link from "next/link";
 import ButtonFill from "../ButtonFill";
 import ButtonText from "../ButtonText";
 
-interface Cta {
+type Cta = {
   text: string;
   url: string;
   filled?: boolean;
-}
+};
 
 const CircleButton = ({ text, url, filled = false }: Cta) => {
   const [hover, setHover] = useState(false);

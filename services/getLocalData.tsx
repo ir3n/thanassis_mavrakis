@@ -1,0 +1,11 @@
+import { promises as fs } from "fs";
+
+export const getLocalData = async (fileName: string) => {
+  const file = await fs.readFile(
+    `${process.cwd()}/data/${fileName}.json`,
+    "utf8"
+  );
+  const data = JSON.parse(file);
+
+  return data;
+};

@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
 
-interface BurgerProps {
+type BurgerProps = {
   openMenu: boolean;
   setOpenMenu: Dispatch<SetStateAction<boolean>>;
-}
+};
 
 const Burger = ({ openMenu, setOpenMenu }: BurgerProps) => {
   return (

@@ -1,7 +1,7 @@
-interface TextType {
+type TextType = {
   children: React.ReactNode;
   size?: "lg" | "normal" | "sm";
-}
+};
 
 const Text = ({ children, size = "normal" }: TextType) => {
   let classes = "";
