@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import TextsForButton from "../Buttons/ButtonText";
+import ButtonText from "../Buttons/ButtonText";
 import Text from "../Typography/Text";
 
 function MenuItem({ link, name }: LinkType) {
@@ -17,7 +17,7 @@ function MenuItem({ link, name }: LinkType) {
     >
       <Text size="lg">
         <div magnetic-element="true">
-          <TextsForButton text={name} hover={hover} />
+          <ButtonText text={name} hover={hover} />
         </div>
       </Text>
     </Link>
