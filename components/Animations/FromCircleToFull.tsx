@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 import { useGsap } from "@/hooks/useGsap";
 
-function FromCircleToFull() {
+const FromCircleToFull = () => {
   const parentRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -39,6 +39,6 @@ function FromCircleToFull() {
       ></div>
     </div>
   );
-}
+};
 
 export default FromCircleToFull;

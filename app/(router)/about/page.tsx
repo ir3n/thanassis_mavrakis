@@ -6,7 +6,7 @@ import IntroBanner from "@/components/IntroBanner";
 
 import data from "@/data/aboutIntro.json";
 
-export default function About() {
+const About = () => {
   const { title, text, image, marquee } = data;
   return (
     <>
@@ -27,4 +27,6 @@ export default function About() {
       </section>
     </>
   );
-}
+};
+
+export default About;

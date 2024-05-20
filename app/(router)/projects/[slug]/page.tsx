@@ -24,8 +24,7 @@ async function getPost(params: Params) {
   const data = allProjects?.find((proj) => proj.id === params?.slug);
   return data;
 }
-
-export default async function Page({ params }: { params: Params }) {
+const Page = async ({ params }: { params: Params }) => {
   const data = await getPost(params);
 
   const next = projectTeasers?.projects?.find(
@@ -65,4 +64,6 @@ export default async function Page({ params }: { params: Params }) {
       <section>{next && <NextProject project={next} />}</section>
     </div>
   );
-}
+};
+
+export default Page;

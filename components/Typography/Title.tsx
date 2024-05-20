@@ -3,7 +3,7 @@ interface TitleType {
   size?: "lg" | "normal" | "project";
 }
 
-function Title({ children, size = "normal" }: TitleType) {
+const Title = ({ children, size = "normal" }: TitleType) => {
   let classes = "";
 
   switch (size) {
@@ -21,6 +21,6 @@ function Title({ children, size = "normal" }: TitleType) {
   return (
     <div className={`font-heading font-semibold ${classes}`}>{children}</div>
   );
-}
+};
 
 export default Title;

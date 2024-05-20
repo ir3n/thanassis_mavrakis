@@ -3,7 +3,7 @@ interface TextType {
   size?: "lg" | "normal" | "sm";
 }
 
-function Text({ children, size = "normal" }: TextType) {
+const Text = ({ children, size = "normal" }: TextType) => {
   let classes = "";
 
   switch (size) {
@@ -19,6 +19,6 @@ function Text({ children, size = "normal" }: TextType) {
   }
 
   return <div className={`font-body text ${classes}`}>{children}</div>;
-}
+};
 
 export default Text;

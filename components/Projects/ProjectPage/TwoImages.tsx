@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ParallaxElements from "@/components/Animations/ParallaxElements";
 
-function TwoImages({ images }: { images: ImageType[] }) {
+const TwoImages = ({ images }: { images: ImageType[] }) => {
   return (
     <div className="md:flex md:gap-[20px] lg:gap-[40px] md:items-start mb-[60px] md:mb-[150px] lg:mb-[250px]">
       {images?.map((img, i) => (
@@ -13,6 +13,6 @@ function TwoImages({ images }: { images: ImageType[] }) {
       ))}
     </div>
   );
-}
+};
 
 export default TwoImages;

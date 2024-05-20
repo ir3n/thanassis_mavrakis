@@ -9,7 +9,7 @@ interface Props {
   height: number;
 }
 
-function BrushStroke({ image, className, width, height }: Props) {
+const BrushStroke = ({ image, className, width, height }: Props) => {
   return (
     <div className={`stroke ${className}`}>
       <Image
@@ -22,6 +22,6 @@ function BrushStroke({ image, className, width, height }: Props) {
       />
     </div>
   );
-}
+};
 
 export default BrushStroke;

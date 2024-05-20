@@ -5,7 +5,7 @@ interface BurgerProps {
   setOpenMenu: Dispatch<SetStateAction<boolean>>;
 }
 
-function Burger({ openMenu, setOpenMenu }: BurgerProps) {
+const Burger = ({ openMenu, setOpenMenu }: BurgerProps) => {
   return (
     <button
       onClick={() => setOpenMenu(!openMenu)}
@@ -27,6 +27,6 @@ function Burger({ openMenu, setOpenMenu }: BurgerProps) {
       ></div>
     </button>
   );
-}
+};
 
 export default Burger;

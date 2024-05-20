@@ -5,7 +5,7 @@ interface Props {
   color?: "white" | "accent";
 }
 
-function ButtonFill({ show, color = "white" }: Props) {
+const ButtonFill = ({ show, color = "white" }: Props) => {
   const background = color === "accent" ? "bg-accent" : "bg-white";
   return (
     <div
@@ -14,6 +14,6 @@ function ButtonFill({ show, color = "white" }: Props) {
       } ${background}`}
     ></div>
   );
-}
+};
 
 export default ButtonFill;

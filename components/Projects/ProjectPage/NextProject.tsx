@@ -15,7 +15,7 @@ type Props = {
   image: ImageType;
 };
 
-function NextProject({ project }: { project: Props }) {
+const NextProject = ({ project }: { project: Props }) => {
   const desk = useWindowWidth() > 1024;
 
   return (
@@ -57,6 +57,6 @@ function NextProject({ project }: { project: Props }) {
       </LinkDesktopNolinkMobile>
     </ShowOnScroll>
   );
-}
+};
 
 export default NextProject;

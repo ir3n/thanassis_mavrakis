@@ -5,7 +5,7 @@ interface Props {
   hover: boolean;
 }
 
-function ButtonText({ text, hover }: Props) {
+const ButtonText = ({ text, hover }: Props) => {
   return (
     <div className={`overflow-hidden relative`}>
       <div
@@ -24,6 +24,6 @@ function ButtonText({ text, hover }: Props) {
       </div>
     </div>
   );
-}
+};
 
 export default ButtonText;

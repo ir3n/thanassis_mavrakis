@@ -3,12 +3,12 @@
 import { useRef } from "react";
 import { useGsap } from "@/hooks/useGsap";
 
-function ShowOnScroll({
+const ShowOnScroll = ({
   children,
   animation = "fromBelow",
   index = 0,
   full,
-}: AnimationType) {
+}: AnimationType) => {
   const ref = useRef(null);
 
   const gsapSettings = {
@@ -34,6 +34,6 @@ function ShowOnScroll({
       {children}
     </div>
   );
-}
+};
 
 export default ShowOnScroll;

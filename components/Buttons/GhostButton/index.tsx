@@ -7,7 +7,7 @@ import ButtonText from "../ButtonText";
 import ButtonFill from "../ButtonFill";
 import Text from "@/components/Typography/Text";
 
-function GhostButton({ link, name }: LinkType) {
+const GhostButton = ({ link, name }: LinkType) => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -25,6 +25,6 @@ function GhostButton({ link, name }: LinkType) {
       </Text>
     </div>
   );
-}
+};
 
 export default GhostButton;

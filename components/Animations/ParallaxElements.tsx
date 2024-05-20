@@ -5,7 +5,7 @@ import { useGsap } from "@/hooks/useGsap";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-function ParallaxElements({ children, index = 0 }: AnimationType) {
+const ParallaxElements = ({ children, index = 0 }: AnimationType) => {
   const ref = useRef(null);
 
   const mobile = useWindowWidth() < 768;
@@ -41,6 +41,6 @@ function ParallaxElements({ children, index = 0 }: AnimationType) {
   useGsap({ ...gsapSettings });
 
   return <div ref={ref}>{children}</div>;
-}
+};
 
 export default ParallaxElements;

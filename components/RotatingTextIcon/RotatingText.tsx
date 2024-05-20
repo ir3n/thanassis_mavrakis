@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGsap } from "@/hooks/useGsap";
 
-function RotatingText({ title }: { title: string }) {
+const RotatingText = ({ title }: { title: string }) => {
   const rotatingRef = useRef(null);
 
   const gsapSettings = {
@@ -53,6 +53,6 @@ function RotatingText({ title }: { title: string }) {
       </text>
     </svg>
   );
-}
+};
 
 export default RotatingText;

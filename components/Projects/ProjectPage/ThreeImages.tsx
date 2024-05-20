@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import ParallaxElements from "@/components/Animations/ParallaxElements";
 
-function ThreeImages({ images }: { images: ImageType[] }) {
+const ThreeImages = ({ images }: { images: ImageType[] }) => {
   return (
     <div className="md:flex md:gap-[20px] lg:gap-[40px] items-start">
       {images?.map((img, i) => (
@@ -18,6 +18,6 @@ function ThreeImages({ images }: { images: ImageType[] }) {
       ))}
     </div>
   );
-}
+};
 
 export default ThreeImages;

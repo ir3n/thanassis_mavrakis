@@ -4,13 +4,13 @@ import { useState } from "react";
 
 import RotatingText from "./RotatingText";
 
-function RotatingTextIcon({
+const RotatingTextIcon = ({
   name,
   children,
 }: {
   name: string;
   children: React.ReactNode;
-}) {
+}) => {
   const [hover, setHover] = useState(false);
   return (
     <div
@@ -30,6 +30,6 @@ function RotatingTextIcon({
       </div>
     </div>
   );
-}
+};
 
 export default RotatingTextIcon;

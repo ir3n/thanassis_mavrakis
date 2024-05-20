@@ -17,7 +17,7 @@ type Props = {
   banner: string;
 };
 
-function ProjectBanner({ title, link, date, services, banner }: Props) {
+const ProjectBanner = ({ title, link, date, services, banner }: Props) => {
   const desk = useWindowWidth() > 1024;
   const mobile = useWindowWidth() < 768;
 
@@ -93,6 +93,6 @@ function ProjectBanner({ title, link, date, services, banner }: Props) {
       </LinkDesktopNolinkMobile>
     </div>
   );
-}
+};
 
 export default ProjectBanner;

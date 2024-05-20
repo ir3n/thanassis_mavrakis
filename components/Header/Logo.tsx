@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function Logo() {
+const Logo = () => {
   return (
     <div className="block max-w-[62px] md:max-w-[85px] relative z-50">
       <Link href="/" data-cursor="-scale">
@@ -16,6 +16,6 @@ function Logo() {
       </Link>
     </div>
   );
-}
+};
 
 export default Logo;

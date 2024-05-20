@@ -9,7 +9,7 @@ import Services from "@/components/Services";
 
 import homeIntro from "@/data/homeIntro.json";
 
-export default function Home() {
+const Home = () => {
   const { title, text, link, linkText } = homeIntro;
 
   return (
@@ -41,4 +41,6 @@ export default function Home() {
       </section>
     </>
   );
-}
+};
+
+export default Home;

@@ -4,7 +4,7 @@ import Title from "@/components/Typography/Title";
 
 import data from "@/data/projectListing.json";
 
-export default function Projects() {
+const Projects = () => {
   const { title, projects } = data;
 
   return (
@@ -36,4 +36,6 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+};
+
+export default Projects;

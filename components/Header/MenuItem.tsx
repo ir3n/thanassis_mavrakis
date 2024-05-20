@@ -6,7 +6,7 @@ import Link from "next/link";
 import ButtonText from "../Buttons/ButtonText";
 import Text from "../Typography/Text";
 
-function MenuItem({ link, name }: LinkType) {
+const MenuItem = ({ link, name }: LinkType) => {
   const [hover, setHover] = useState(false);
   return (
     <Link
@@ -22,6 +22,6 @@ function MenuItem({ link, name }: LinkType) {
       </Text>
     </Link>
   );
-}
+};
 
 export default MenuItem;

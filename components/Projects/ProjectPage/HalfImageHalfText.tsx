@@ -4,7 +4,7 @@ import Text from "@/components/Typography/Text";
 
 type Props = { text: string; image: ImageType };
 
-function HalfImageHalfText({ text, image }: Props) {
+const HalfImageHalfText = ({ text, image }: Props) => {
   return (
     <div className="md:flex md:items-center">
       <div className="flex-1 md:pr-[20px] lg:pr-[40px]">
@@ -26,6 +26,6 @@ function HalfImageHalfText({ text, image }: Props) {
       </div>
     </div>
   );
-}
+};
 
 export default HalfImageHalfText;
