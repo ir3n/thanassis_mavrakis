@@ -30,8 +30,6 @@ type Props = {
 export async function generateStaticParams() {
   const data = await serverGetData("fullProjects");
 
-  if (!data) return;
-
   const ids = data?.map((proj: Project) => proj?.id);
   const paths = ids?.map((id: string) => ({
     id: id,
