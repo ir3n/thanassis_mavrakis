@@ -5,7 +5,7 @@ import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 import FromCircleToFull from "../Animations/FromCircleToFull";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type ContactType = {
   subtitle: string;
@@ -15,7 +15,7 @@ type ContactType = {
 };
 
 const Contact = async () => {
-  const data: ContactType = await getLocalData("footer");
+  const data: ContactType = await serverGetData("footer");
   const { subtitle, title, button, social } = data;
 
   return (

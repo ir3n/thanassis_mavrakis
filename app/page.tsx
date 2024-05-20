@@ -7,7 +7,7 @@ import RotatingTextIcon from "@/components/RotatingTextIcon";
 import Projects from "@/components/Projects/PromotedProjects";
 import Services from "@/components/Services";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type HomeData = {
   title: string;
@@ -16,7 +16,7 @@ type HomeData = {
 };
 
 async function getData() {
-  const data = await getLocalData("homeIntro");
+  const data = await serverGetData("homeIntro");
 
   return data;
 }

@@ -1,7 +1,7 @@
 // only use this in SERVER components
 import { promises as fs } from "fs";
 
-export const getLocalData = async (fileName: string) => {
+export const serverGetData = async (fileName: string) => {
   const file = await fs.readFile(
     `${process.cwd()}/data/${fileName}.json`,
     "utf8"

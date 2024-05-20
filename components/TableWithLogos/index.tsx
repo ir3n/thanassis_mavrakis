@@ -2,7 +2,7 @@ import LogoItem from "./LogoItem";
 import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type StackType = {
   title: string;
@@ -10,7 +10,7 @@ type StackType = {
 };
 
 const TableWithLogos = async () => {
-  const data: StackType = await getLocalData("stack");
+  const data: StackType = await serverGetData("stack");
   const { title, logos } = data;
 
   return (

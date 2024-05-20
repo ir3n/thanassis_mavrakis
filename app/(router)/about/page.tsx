@@ -4,7 +4,7 @@ import Services from "@/components/Services";
 import TableWithLogos from "@/components/TableWithLogos";
 import IntroBanner from "@/components/IntroBanner";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type AboutData = {
   title: string;
@@ -14,7 +14,7 @@ type AboutData = {
 };
 
 async function getData() {
-  const data = await getLocalData("aboutIntro");
+  const data = await serverGetData("aboutIntro");
 
   return data;
 }

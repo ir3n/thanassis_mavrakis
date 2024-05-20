@@ -2,7 +2,7 @@ import ProjectTeaser from "@/components/Projects/ProjectTeaser";
 import ShowAnimation from "@/components/Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type ProjectListing = {
   title: string;
@@ -10,7 +10,7 @@ type ProjectListing = {
 };
 
 async function getData() {
-  const data = await getLocalData("projectListing");
+  const data = await serverGetData("projectListing");
 
   return data;
 }

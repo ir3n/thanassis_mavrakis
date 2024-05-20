@@ -30,6 +30,7 @@ const RootLayout = ({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed overflow-x-hidden`}
       >
         <MouseFollowerComponent>

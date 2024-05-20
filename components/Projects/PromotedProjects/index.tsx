@@ -3,13 +3,13 @@ import CircleButton from "../../Buttons/CircleButton";
 import ShowAnimation from "../../Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 const PromotedProjects = async () => {
-  const data = await getLocalData("promotedProjects");
+  const data = await serverGetData("promotedProjects");
   const { title, button, projects } = data;
 
-  const projectListing = await getLocalData("projectListing");
+  const projectListing = await serverGetData("projectListing");
   const allProjects = projectListing?.projects;
 
   const promotedProjects = allProjects?.filter((proj: ProjTeaser) =>

@@ -6,7 +6,7 @@ import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
 import ShowAnimation from "@/components/Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type Project = {
   id: string;
@@ -34,7 +34,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const data = await getLocalData("fullProjects");
+  const data = await serverGetData("fullProjects");
 
   if (!data) return;
 
@@ -47,10 +47,10 @@ export async function generateStaticParams() {
 }
 
 async function getPost(params: Params) {
-  const projects = await getLocalData("fullProjects");
+  const projects = await serverGetData("fullProjects");
   const project = projects?.find((proj: Project) => proj.id === params?.slug);
 
-  const projectTeasers = await getLocalData("projectListing");
+  const projectTeasers = await serverGetData("projectListing");
   const nextProject = projectTeasers?.projects?.find(
     (proj: ProjectTeaser) => proj.id === project?.nextProject
   );

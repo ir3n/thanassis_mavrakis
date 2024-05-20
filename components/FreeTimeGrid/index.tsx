@@ -4,7 +4,7 @@ import ShowAnimation from "../Animations/ShowOnScroll";
 import Title from "../Typography/Title";
 import Text from "../Typography/Text";
 
-import { getLocalData } from "@/services/getLocalData";
+import { serverGetData } from "@/services/serverGetData";
 
 type FreeTimeData = {
   title: string;
@@ -13,7 +13,7 @@ type FreeTimeData = {
 };
 
 const FreeTimeGrid = async () => {
-  const data: FreeTimeData = await getLocalData("freeTime");
+  const data: FreeTimeData = await serverGetData("freeTime");
   const { title, text, images } = data;
 
   return (
