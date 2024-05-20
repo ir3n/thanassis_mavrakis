@@ -28,34 +28,55 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const data = await serverGetData("fullProjects");
+  try {
+    const data = await serverGetData("fullProjects");
 
-  const ids = data?.map((proj: Project) => proj?.id);
-  const paths = ids?.map((id: string) => ({
-    id: id,
-  }));
+    const ids = data?.map((proj: Project) => proj?.id);
+    const paths = ids?.map((id: string) => ({
+      id: id,
+    }));
 
-  return paths;
+    return paths;
+  } catch (error) {
+    console.error("Error generating static params:", error);
+    return [];
+  }
 }
 
 async function getPost(params: Params) {
-  const projects = await serverGetData("fullProjects");
-  const project = projects?.find((proj: Project) => proj.id === params?.slug);
+  try {
+    const projects = await serverGetData("fullProjects");
+    const project = projects?.find((proj: Project) => proj.id === params?.slug);
+    if (!project) {
+      return { project: null, nextProject: null };
+    }
 
-  const projectTeasers = await serverGetData("projectListing");
-  const nextProject = projectTeasers?.projects?.find(
-    (proj: ProjTeaser) => proj.id === project?.nextProject
-  );
+    const projectTeasers = await serverGetData("projectListing");
+    const nextProject = projectTeasers?.projects?.find(
+      (proj: ProjTeaser) => proj.id === project?.nextProject
+    );
 
-  return {
-    project,
-    nextProject,
-  };
+    return {
+      project,
+      nextProject: nextProject || null,
+    };
+  } catch (error) {
+    console.error("Error fetching post data:", error);
+    return { project: null, nextProject: null };
+  }
 }
 
 const Page = async ({ params }: { params: Params }) => {
   const props: Props = await getPost(params);
   const { project, nextProject } = props;
+
+  if (!project) {
+    return (
+      <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
+        Project not found
+      </div>
+    );
+  }
 
   return (
     <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
