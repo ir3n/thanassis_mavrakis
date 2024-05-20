@@ -22,12 +22,6 @@ type Project = {
   nextProject: string;
 };
 
-type ProjectTeaser = {
-  id: string;
-  title: string;
-  link: string;
-};
-
 type Props = {
   project: Project;
   nextProject: NextProject | null;
@@ -52,7 +46,7 @@ async function getPost(params: Params) {
 
   const projectTeasers = await serverGetData("projectListing");
   const nextProject = projectTeasers?.projects?.find(
-    (proj: ProjectTeaser) => proj.id === project?.nextProject
+    (proj: ProjTeaser) => proj.id === project?.nextProject
   );
 
   return {
