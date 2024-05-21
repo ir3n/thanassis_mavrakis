@@ -20,7 +20,7 @@ const Projects = async () => {
   const { title, projects } = data;
 
   return (
-    <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] md:pb-[400px] lg:pb-[500px]">
+    <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] md:pb-[100px]">
       <ShowAnimation>
         <Title size="lg">
           <h1 className="mb-[100px] lg:mb-[200px]">{title}</h1>

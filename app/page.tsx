@@ -29,21 +29,21 @@ const Home = async () => {
     <>
       <section className="container full-height-section">
         <IntroBanner title={title} text={text} link={link} />
-        <div className="hidden lg:block xxl:mt-[100px] w-fit mx-auto">
+        {/* <div className="hidden lg:block xxl:mt-[100px] w-fit mx-auto">
           <Link href={`#projects`} aria-label="Scroll down">
             <RotatingTextIcon name="scrolldown">
               <ArrowDown size={68} color="white" />
             </RotatingTextIcon>
           </Link>
-        </div>
+        </div> */}
       </section>
 
-      <section
+      {/* <section
         id="projects"
         className="container pt-[70px] xl:pt-[150px] pb-[100px] relative"
       >
         <Projects />
-      </section>
+      </section> */}
       <section>
         <Services />
       </section>

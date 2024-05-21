@@ -2,15 +2,6 @@
   "title": "Projects",
   "projects": [
     {
-      "id": "retool",
-      "image": {
-        "src": "/images/projects/retool-teaser.png",
-        "alt": "Retool"
-      },
-      "subtitle": "#UI/UX Design",
-      "title": "Retool"
-    },
-    {
       "id": "papaioannou",
       "image": {
         "src": "/images/projects/papaioannou-teaser.png",
@@ -18,24 +9,6 @@
       },
       "subtitle": "#UI/UX design, #Web development",
       "title": "P & A Papaioannou O.E."
-    },
-    {
-      "id": "transience",
-      "image": {
-        "src": "/images/projects/transience-teaser.png",
-        "alt": "Transience"
-      },
-      "subtitle": "#UI/UX Design",
-      "title": "Transience"
-    },
-    {
-      "id": "achieve",
-      "image": {
-        "src": "/images/projects/achieve-teaser.png",
-        "alt": "Achieve"
-      },
-      "subtitle": "#UI/UX Design",
-      "title": "Achieve"
     }
   ]
 }
