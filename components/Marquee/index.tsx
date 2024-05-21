@@ -17,11 +17,13 @@ const Marquee = ({ text }: { text: Marquee }) => {
       itemSelector: ".reel-item",
       speed: 20,
       paused: false,
+      reversed: true,
       plugins: {
         scroller: {
           speed: 1,
           multiplier: 0.5,
           threshold: 1,
+          reversed: true,
         },
       },
     });
