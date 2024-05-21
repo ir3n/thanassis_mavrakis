@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 import MouseFollowerComponent from "@/components/MouseFollower";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import Copyrights from "@/components/Copyrights";
 import BrushStroke from "@/components/BrushStroke";
+import NoiseBg from "@/components/NoiseBg";
 
 import "@/styles/globals.css";
 
@@ -31,19 +31,11 @@ const RootLayout = ({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed overflow-x-hidden`}
+        className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed bg-cover overflow-x-hidden`}
       >
         <MouseFollowerComponent>
           <MagneticHover>
-            <div className="fixed top-0 right-0 bottom-0 left-0">
-              <Image
-                src="/images/noise.png"
-                width={1920}
-                height={1080}
-                alt="Background noise"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <NoiseBg />
             <BrushStroke
               image="/images/splash.svg"
               width={690}
