@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import MenuItem from "./MenuItem";
 import GhostButton from "../Buttons/GhostButton";
@@ -10,13 +11,15 @@ import data from "@/data/header.json";
 const Menu = ({ openMenu }: { openMenu: boolean }) => {
   const { menu, cta } = data;
 
+  const path = usePathname();
+
   return (
     <div
-      className={`fixed top-0 left-[100%] w-screen h-screen md:relative flex-1 md:top-auto md:left-auto md:w-auto md:h-auto text-center md:text-left  transition duration-500 ${
+      className={`fixed top-0 bottom-0 left-[100%] w-screen md:relative flex-1 md:top-auto md:left-auto md:bottom-auto md:w-auto text-center md:text-left  transition duration-500 ${
         openMenu ? "translate-x-[-100%]" : "transform-none"
       }`}
     >
-      <div className="w-screen h-screen md:flex md:justify-between md:items-center relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed bg-cover md:w-auto md:h-auto md:bg-none">
+      <div className="w-full h-full md:flex md:justify-between md:items-center relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed bg-cover md:w-auto md:h-auto md:bg-none">
         <div className="absolute top-0 left-0 w-screen h-screen md:hidden">
           <Image
             src="/images/mobile-noise.png"
@@ -29,7 +32,14 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
         <nav className="m-auto pt-[150px] md:pt-0  relative z-[1]">
           <ul className="md:flex items-center gap-[80px]">
             <li className="md:hidden mb-[50px] md:mb-0">
-              <Link href="/">
+              <Link
+                href="/"
+                className={`${
+                  path === "/"
+                    ? "text-accent pointer-events-none"
+                    : "text-white"
+                }`}
+              >
                 <Text size="lg">Home</Text>
               </Link>
             </li>

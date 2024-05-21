@@ -6,7 +6,7 @@ import { useWindowWidth } from "@/hooks/useWindowWidth";
 const NoiseBg = () => {
   const mobile = useWindowWidth() < 768;
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen">
+    <div className="fixed top-0 left-0 bottom-0 right-0 bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-cover">
       {mobile ? (
         <Image
           src="/images/mobile-noise.png"

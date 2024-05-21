@@ -31,7 +31,7 @@ const RootLayout = ({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${heading.variable} ${body.variable} relative bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-fixed bg-cover overflow-x-hidden`}
+        className={`${heading.variable} ${body.variable} relative overflow-x-hidden`}
       >
         <MouseFollowerComponent>
           <MagneticHover>

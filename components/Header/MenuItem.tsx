@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import ButtonText from "../Buttons/ButtonText";
@@ -11,8 +11,6 @@ import { useIsActive } from "@/hooks/useIsActive";
 const MenuItem = ({ link, name }: LinkType) => {
   const [hover, setHover] = useState(false);
 
-  const linkRef = useRef(null);
-
   const active = useIsActive(link);
 
   return (
@@ -20,7 +18,6 @@ const MenuItem = ({ link, name }: LinkType) => {
       href={link}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      ref={linkRef}
       className={`${active ? "text-accent pointer-events-none" : "text-white"}`}
     >
       <Text size="lg">
