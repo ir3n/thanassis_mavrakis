@@ -44,6 +44,7 @@ const ProjectBanner = ({ title, link, date, services, banner }: Props) => {
       <LinkDesktopNolinkMobile
         url={link || "#"}
         text={link ? "Visit site" : ""}
+        external={true}
       >
         <div
           ref={parentRef}
