@@ -2,10 +2,14 @@
 import Image from "next/image";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-const NoiseBg = () => {
+const NoiseBg = ({ fixed = false }) => {
   const mobile = useWindowWidth() < 768;
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-gradient-to-br from-secondary from-[-20%] to-dark to-50%">
+    <div
+      className={`${
+        fixed ? "fixed" : "absolute"
+      } top-0 left-0 w-screen h-screen bg-gradient-to-br from-secondary from-[-20%] to-dark to-50%`}
+    >
       {mobile ? (
         <Image
           src="/images/mobile-noise.png"

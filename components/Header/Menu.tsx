@@ -16,12 +16,14 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
 
   return (
     <div
-      className={`fixed top-0 left-[100%] w-screen h-screen md:relative flex-1 md:top-auto md:left-auto md:h-auto md:w-auto text-center md:text-left  transition duration-500  ${
+      className={`fixed top-0 left-[100%] w-screen h-screen md:relative flex-1 md:top-auto md:left-auto md:h-auto md:w-auto text-center md:text-left  transition duration-500 bg-dark md:bg-opacity-0 ${
         openMenu ? "translate-x-[-100%]" : "transform-none"
       }`}
     >
-      {/* <NoiseBg /> */}
-      <div className="w-full h-full md:flex md:justify-between md:items-center relative md:w-auto md:h-auto bg-dark md:bg-opacity-0">
+      <div className="w-full h-full md:flex md:justify-between md:items-center relative md:w-auto md:h-auto">
+        <div className="md:hidden">
+          <NoiseBg />
+        </div>
         <nav className="m-auto pt-[150px] md:pt-0  relative z-[1]">
           <ul className="md:flex items-center gap-[80px]">
             <li className="md:hidden mb-[50px] md:mb-0">

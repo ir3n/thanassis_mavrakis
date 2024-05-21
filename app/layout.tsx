@@ -33,7 +33,7 @@ const RootLayout = ({
         suppressHydrationWarning
         className={`${heading.variable} ${body.variable} relative overflow-x-hidden bg-dark`}
       >
-        <NoiseBg />
+        <NoiseBg fixed={true} />
         <BrushStroke
           image="/images/splash.svg"
           width={690}
