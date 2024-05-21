@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import Copyrights from "@/components/Copyrights";
 import BrushStroke from "@/components/BrushStroke";
-import NoiseBg from "@/components/NoiseBg";
 
 import "@/styles/globals.css";
 
@@ -31,11 +30,10 @@ const RootLayout = ({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${heading.variable} ${body.variable} relative overflow-x-hidden`}
+        className={`${heading.variable} ${body.variable} relative overflow-x-hidden gradient-bg`}
       >
         <MouseFollowerComponent>
           <MagneticHover>
-            <NoiseBg />
             <BrushStroke
               image="/images/splash.svg"
               width={690}

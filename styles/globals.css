@@ -12,6 +12,15 @@ body {
 a {
   @apply lg:cursor-none;
 }
+.text p {
+  @apply mb-5;
+}
+p em {
+  @apply text-accent not-italic;
+}
+p a {
+  @apply underline;
+}
 .container {
   @apply max-w-full lg:max-w-[1800px] px-[20px] md:px-[60px] lg:px-[100px] mx-auto;
 }
@@ -21,14 +30,8 @@ a {
 .rounded {
   @apply rounded-[14px] lg:rounded-[20px] overflow-hidden;
 }
-.text p {
-  @apply mb-5;
-}
-p em {
-  @apply text-accent not-italic;
-}
-p a {
-  @apply underline;
+.gradient-bg {
+  @apply bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-cover bg-fixed bg-no-repeat;
 }
 
 /* Scrollbar */
