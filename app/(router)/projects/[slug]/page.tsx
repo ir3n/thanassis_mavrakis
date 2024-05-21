@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import HalfImageHalfText from "@/components/Projects/ProjectPage/HalfImageHalfText";
 import NextProject from "@/components/Projects/ProjectPage/NextProject";
 import ProjectBanner from "@/components/Projects/ProjectPage/ProjectBanner";
@@ -5,6 +7,7 @@ import ThreeImages from "@/components/Projects/ProjectPage/ThreeImages";
 import TwoImages from "@/components/Projects/ProjectPage/TwoImages";
 import ShowAnimation from "@/components/Animations/ShowOnScroll";
 import Title from "@/components/Typography/Title";
+import Text from "@/components/Typography/Text";
 
 import { serverGetData } from "@/services/serverGetData";
 
@@ -72,8 +75,14 @@ const Page = async ({ params }: { params: Params }) => {
 
   if (!project) {
     return (
-      <div className="container pt-[140px] md:pt-[200px] lg:pt-[250px] pb-[80px] lg:pb-[150px]">
-        Project not found
+      <div className="container pt-[240px] md:pt-[300px] lg:pt-[350px] pb-[150px] lg:min-h-screen">
+        <Text size="lg">
+          <p>Oops! I could not find the project that you are looking for.</p>
+          <p>
+            Please <Link href="/projects">go back to projects</Link> and try
+            again.
+          </p>
+        </Text>
       </div>
     );
   }
