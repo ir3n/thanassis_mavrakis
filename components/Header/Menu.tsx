@@ -7,6 +7,7 @@ import GhostButton from "../Buttons/GhostButton";
 import Text from "../Typography/Text";
 
 import data from "@/data/header.json";
+import NoiseBg from "../NoiseBg";
 
 const Menu = ({ openMenu }: { openMenu: boolean }) => {
   const { menu, cta } = data;
@@ -15,11 +16,12 @@ const Menu = ({ openMenu }: { openMenu: boolean }) => {
 
   return (
     <div
-      className={`fixed top-0 left-[100%] w-screen h-screen md:relative flex-1 md:top-auto md:left-auto md:h-auto md:w-auto text-center md:text-left  transition duration-500 gradient-bg md:bg-none ${
+      className={`fixed top-0 left-[100%] w-screen h-screen md:relative flex-1 md:top-auto md:left-auto md:h-auto md:w-auto text-center md:text-left  transition duration-500  ${
         openMenu ? "translate-x-[-100%]" : "transform-none"
       }`}
     >
-      <div className="w-full h-full md:flex md:justify-between md:items-center relative md:w-auto md:h-auto md:bg-none">
+      {/* <NoiseBg /> */}
+      <div className="w-full h-full md:flex md:justify-between md:items-center relative md:w-auto md:h-auto bg-dark md:bg-opacity-0">
         <nav className="m-auto pt-[150px] md:pt-0  relative z-[1]">
           <ul className="md:flex items-center gap-[80px]">
             <li className="md:hidden mb-[50px] md:mb-0">

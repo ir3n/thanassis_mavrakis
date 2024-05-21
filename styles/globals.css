@@ -30,9 +30,6 @@ p a {
 .rounded {
   @apply rounded-[14px] lg:rounded-[20px] overflow-hidden;
 }
-.gradient-bg {
-  @apply bg-gradient-to-br from-secondary from-[-20%] to-dark to-50% bg-cover bg-fixed bg-no-repeat;
-}
 
 /* Scrollbar */
 *::-webkit-scrollbar {
