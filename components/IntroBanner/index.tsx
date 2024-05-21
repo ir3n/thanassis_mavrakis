@@ -22,7 +22,7 @@ const IntroBanner = ({ title, text, image, link }: IntroData) => {
       <LinkDesktopNolinkMobile url={link?.link} text={link?.name || ""}>
         <div
           className={`pb-[35px] lg:pb-[100px] ${
-            image && "lg:w-1/2 lg:max-w-[636px]"
+            image && "lg:w-1/2 lg:max-w-[636px] relative z-[1]"
           }`}
         >
           <ShowAnimation>
