@@ -28,7 +28,7 @@ const NextProject = ({ project }: { project: NextProject }) => {
                 <div className="w-fit ml-auto md:ml-0 lg:hidden">
                   <CircleButton
                     text="View project"
-                    url={`/projects/${project?.id}`}
+                    url={`/work/${project?.id}`}
                     filled={true}
                   />
                 </div>
