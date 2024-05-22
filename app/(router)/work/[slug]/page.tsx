@@ -14,15 +14,15 @@ import { serverGetData } from "@/services/serverGetData";
 type Project = {
   id: string;
   title: string;
-  link: string;
-  date: string;
-  services: string[];
-  banner: string;
-  text: string;
-  halfImage: { src: string; alt: string };
-  twoImages: { src: string; alt: string }[];
-  threeImages: { src: string; alt: string }[];
-  nextProject: string;
+  link?: string;
+  date?: string;
+  services?: string[];
+  banner?: string;
+  text?: string;
+  halfImage?: { src: string; alt: string };
+  twoImages?: { src: string; alt: string }[];
+  threeImages?: { src: string; alt: string }[];
+  nextProject?: string;
 };
 
 type Props = {
@@ -95,29 +95,39 @@ const Page = async ({ params }: { params: Params }) => {
         </Title>
       </ShowAnimation>
 
-      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
-        <ProjectBanner
-          title={project?.title ?? ""}
-          link={project?.link ?? "#"}
-          date={project?.date ?? ""}
-          services={project?.services ?? []}
-          banner={project?.banner ?? ""}
-        />
-      </section>
+      {project?.banner && (
+        <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
+          <ProjectBanner
+            title={project?.title ?? ""}
+            link={project?.link ?? "#"}
+            date={project?.date ?? ""}
+            services={project?.services ?? []}
+            banner={project?.banner}
+          />
+        </section>
+      )}
 
-      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
-        <HalfImageHalfText
-          text={project?.text ?? ""}
-          image={project?.halfImage ?? { src: "", alt: "" }}
-        />
-      </section>
+      {(project?.text || project?.halfImage) && (
+        <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
+          <HalfImageHalfText
+            text={project?.text ?? ""}
+            image={project?.halfImage ?? { src: "", alt: "" }}
+          />
+        </section>
+      )}
 
-      <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
-        <TwoImages images={project?.twoImages ?? []} />
-        <ThreeImages images={project?.threeImages ?? []} />
-      </section>
+      {(project?.twoImages || project?.threeImages) && (
+        <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
+          <TwoImages images={project?.twoImages ?? []} />
+          <ThreeImages images={project?.threeImages ?? []} />
+        </section>
+      )}
 
-      <section>{nextProject && <NextProject project={nextProject} />}</section>
+      {nextProject && (
+        <section>
+          <NextProject project={nextProject} />
+        </section>
+      )}
     </div>
   );
 };

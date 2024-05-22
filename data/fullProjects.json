@@ -1,12 +1,32 @@
 [
   {
+    "id": "uppercut",
+    "title": "Uppercut",
+    "text": "<p>January 2024 - Present<br/><strong>Freelance UI/UX Designer</strong></p><p>I am involved in the design process of various websites, with my current projects focusing on the energy and environment sector.</p><p>I am responsible for creating user-friendly, visually appealing and effective websites that communicate key messages about renewable energy, environmental conservation, and sustainability.</p>",
+    "halfImage": {
+      "src": "/images/projects/uppercut/half-banner.svg",
+      "alt": "Uppercut"
+    },
+    "nextProject": "customedialabs"
+  },
+  {
+    "id": "customedialabs",
+    "title": "Customedialabs",
+    "text": "<p>July 2023 - April 2024<br/><strong>Web/Graphic Designer</strong></p><p>I was involved in the design process of websites and applications. I also designed e-books, conducted UX audits and designed posts for social media platforms.</p><p>Through these activities, I helped create clear and engaging digital experiences that connect with users and support business goals.</p>",
+    "halfImage": {
+      "src": "/images/projects/customedialabs/half-banner.svg",
+      "alt": "Uppercut"
+    },
+    "nextProject": "papaioannou"
+  },
+  {
     "id": "papaioannou",
     "title": "P & A Papaioannou O.E",
     "date": "February 2023",
-    "services": ["#UI/UX design ", "#Web design"],
+    "services": ["#UI/UX design", "#Web development"],
     "banner": "/images/projects/papaioannou/banner.png",
     "link": "https://www.papaioannou-service.gr/",
-    "text": "<p>P & A Papaioannou O.E. is a car service company that approached me to redesign their website with a more professional and modern look.</p><p>After conducting extensive research into the car service field and their target audience, I developed a fresh and modern design that perfectly fits their brand image.</p><p> The new design effectively showcases their services and provides an exceptional user experience, helping them stand out in their industry.</p>",
+    "text": "<p>P & A Papaioannou O.E. is a car service company that approached me to redesign their website with a more professional and modern look.</p><p>After conducting extensive research into the car service field and their target audience, I developed a fresh and modern design that perfectly fits their brand image. I used Figma for the design process and Wix for the development.</p><p>The new design effectively showcases their services and provides an exceptional user experience, helping them stand out in their industry.</p>",
     "halfImage": {
       "src": "/images/projects/papaioannou/half-banner.png",
       "alt": "Desktop hero banner"
@@ -34,6 +54,17 @@
         "src": "/images/projects/papaioannou/three-images-3.png",
         "alt": "Mobile menu"
       }
-    ]
+    ],
+    "nextProject": "tastybrands"
+  },
+  {
+    "id": "tastybrands",
+    "title": "Tasty Brands",
+    "text": "<p>May 2023 - July 2023<br/><strong>Graphic Designer</strong></p><p>Tasty Brands was a cloud kitchen company. During my time there, I edited numerous photos of food products to make them look appealing and appetizing. Additionally, I designed various assets for the company’s websites, ensuring a cohesive and attractive online presence.</p><p>Through these tasks, I helped make Tasty Brands' products look their best and supported the company's online marketing.</p>",
+    "halfImage": {
+      "src": "/images/projects/tastybrands/half-banner.png",
+      "alt": "Tasty Brands"
+    },
+    "nextProject": "uppercut"
   }
 ]

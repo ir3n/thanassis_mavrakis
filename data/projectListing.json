@@ -1,14 +1,41 @@
 {
-  "title": "Projects",
+  "title": "Work",
   "projects": [
+    {
+      "id": "uppercut",
+      "image": {
+        "src": "/images/projects/uppercut-teaser.png",
+        "alt": "Uppercut"
+      },
+      "subtitle": "01/2024 - present",
+      "title": "Collaboration with Uppercut"
+    },
+    {
+      "id": "customedialabs",
+      "image": {
+        "src": "/images/projects/customedialabs-teaser.png",
+        "alt": "Customedialabs"
+      },
+      "subtitle": "07/2023 - 04/2024",
+      "title": "Web/Graphic Designer at Customedialabs"
+    },
     {
       "id": "papaioannou",
       "image": {
         "src": "/images/projects/papaioannou-teaser.png",
         "alt": "P & A Papaioannou O.E."
       },
-      "subtitle": "#UI/UX design, #Web development",
+      "subtitle": "February 2023",
       "title": "P & A Papaioannou O.E."
+    },
+    {
+      "id": "tastybrands",
+      "image": {
+        "src": "/images/projects/tastybrands-teaser.png",
+        "alt": "Tasty Brands"
+      },
+      "subtitle": "07/2023 - 04/2024",
+      "title": "Graphic Designer at Tasty Brands"
     }
   ]
 }

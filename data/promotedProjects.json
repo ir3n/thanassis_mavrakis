@@ -1,8 +1,8 @@
 {
-  "title": "Projects",
+  "title": "Work",
   "button": {
-    "text": "All projects",
-    "url": "/projects"
+    "text": "All work",
+    "url": "/work"
   },
-  "projects": ["retool", "papaioannou", "transience"]
+  "projects": ["uppercut", "customedialabs", "papaioannou"]
 }

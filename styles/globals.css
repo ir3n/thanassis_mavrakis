@@ -21,6 +21,9 @@ p em {
 p a {
   @apply underline;
 }
+p strong {
+  @apply font-bold;
+}
 .container {
   @apply max-w-full lg:max-w-[1800px] px-[20px] md:px-[60px] lg:px-[100px] mx-auto;
 }

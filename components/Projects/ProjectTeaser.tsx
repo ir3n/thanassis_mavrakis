@@ -10,7 +10,7 @@ const ProjectTeaser = ({ id, image, subtitle, title }: ProjTeaser) => {
   const [hover, setHover] = useState(false);
   return (
     <div className="max-w-[660px] mx-auto mb-[60px] md:mb-0 flex-1">
-      <Link href={`/projects/${id}`} data-cursor-text="View">
+      <Link href={`/work/${id}`} data-cursor-text="View more">
         <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}

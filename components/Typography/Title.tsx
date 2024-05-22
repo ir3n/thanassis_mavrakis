@@ -12,7 +12,7 @@ const Title = ({ children, size = "normal" }: TitleType) => {
         "text-[4rem] lg:text-[7rem] xl:text-[9.375rem] leading-[1.1] lg:leading-[1.3]";
       break;
     case "project":
-      classes = "text-[2.5rem] lg:text-[4rem] xl:text-[6rem] leading-[1.2]";
+      classes = "text-[2rem] lg:text-[3rem] xl:text-[5rem] leading-[1.2]";
       break;
     default:
       classes = "text-[3.375rem] lg:text-[5.5rem] xl:text-[8rem] leading-[1.3]";
