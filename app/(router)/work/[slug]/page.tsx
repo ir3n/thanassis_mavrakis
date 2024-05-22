@@ -94,7 +94,6 @@ const Page = async ({ params }: { params: Params }) => {
           <h1 className="mb-[40px] lg:mb-[125px]">{project?.title}</h1>
         </Title>
       </ShowAnimation>
-
       {project?.banner && (
         <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
           <ProjectBanner
@@ -106,7 +105,6 @@ const Page = async ({ params }: { params: Params }) => {
           />
         </section>
       )}
-
       {(project?.text || project?.halfImage) && (
         <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
           <HalfImageHalfText
@@ -115,14 +113,12 @@ const Page = async ({ params }: { params: Params }) => {
           />
         </section>
       )}
-
       {(project?.twoImages || project?.threeImages) && (
         <section className="mb-[60px] md:mb-[150px] lg:mb-[250px]">
           <TwoImages images={project?.twoImages ?? []} />
           <ThreeImages images={project?.threeImages ?? []} />
         </section>
       )}
-
       {nextProject && (
         <section>
           <NextProject project={nextProject} />
