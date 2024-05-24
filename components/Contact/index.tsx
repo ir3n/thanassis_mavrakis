@@ -39,7 +39,7 @@ const Contact = async () => {
                 {social?.map((item: Social, i) => (
                   <li
                     key={`social-${item?.name}`}
-                    className="mr-[25px] lg:mr-[45px]"
+                    className="mr-[15px] lg:mr-[45px]"
                   >
                     <ShowAnimation animation="popIn" index={i}>
                       <SocialLink

@@ -9,7 +9,7 @@ const SocialLink = ({ name, image, link }: Social) => {
 
   return (
     <div
-      className="relative w-[60px] lg:w-[100px] h-[60px] lg:h-[100px] rounded-full overflow-hidden"
+      className="relative w-[52px] lg:w-[100px] h-[52px] lg:h-[100px] rounded-full overflow-hidden"
       magnetic-element="true"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -22,7 +22,7 @@ const SocialLink = ({ name, image, link }: Social) => {
       <Link
         href={link || "#"}
         target="_blank"
-        className="w-full h-full relative z-1 flex items-center justify-center rounded-full p-[18px]"
+        className="w-full h-full relative z-1 flex items-center justify-center rounded-full p-[14px] lg:p-[18px]"
       >
         <span className="hidden">{name}</span>
         <Image src={image} width={38} height={38} alt={name} />
