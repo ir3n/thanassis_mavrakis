@@ -1,5 +1,81 @@
 [
   {
+    "id": "pawsandtails",
+    "title": "Paws & Tails",
+    "date": "November 2024",
+    "services": ["#UI/UX design", "#Web development"],
+    "banner": "/images/projects/pawsandtails/banner.png",
+    "link": "https://www.paws-and-tails.gr/",
+    "text": "<p>Paws & Tails is a professional dog grooming business dedicated to providing high-quality grooming services tailored to the unique needs of each pet.</p><p>The design focuses on simplicity and warmth, with a fresh, modern look that matches the friendly vibe of Paws & Tails.</p><p>The goal was to create a site that’s easy to navigate, welcoming, and shows just how much the business cares for pets.</p><p>Designed in Figma and developed in Webflow</p>",
+    "halfImage": {
+      "src": "/images/projects/pawsandtails/half-banner.png",
+      "alt": "Desktop hero banner"
+    },
+    "twoImages": [
+      {
+        "src": "/images/projects/pawsandtails/two-images-1.png",
+        "alt": "Home page template"
+      },
+      {
+        "src": "/images/projects/pawsandtails/two-images-2.png",
+        "alt": "Home page template"
+      }
+    ],
+    "threeImages": [
+      {
+        "src": "/images/projects/pawsandtails/three-images-1.png",
+        "alt": "Mobile hero banner"
+      },
+      {
+        "src": "/images/projects/pawsandtails/three-images-2.png",
+        "alt": "Mobile working hours"
+      },
+      {
+        "src": "/images/projects/pawsandtails/three-images-3.png",
+        "alt": "Mobile gallery"
+      }
+    ],
+    "nextProject": "massagejoy"
+  },
+  {
+    "id": "massagejoy",
+    "title": "Massage Joy",
+    "date": "July 2024",
+    "services": ["#UI/UX design"],
+    "banner": "/images/projects/massagejoy/banner.png",
+    "link": "https://massagejoy.gr/",
+    "text": "<p>Massage Joy offers professional massage therapy focused on relaxation and wellness.</p><p>For the redesign, the goal was to create a calming, spa-like digital experience that makes service information and booking options clear and accessible.</p><p>Using Figma, I developed a soft, minimalist design with soothing colors and calming visuals to reflect the brand’s focus on rejuvenation. The layout is clean and intuitive, guiding users effortlessly through the site.</p><p>The website was co-designed with <a href='https://uppercutdesign.com/' target='_blank'>Uppercut Design</a></p>",
+    "halfImage": {
+      "src": "/images/projects/massagejoy/half-banner.png",
+      "alt": "Desktop hero banner"
+    },
+    "twoImages": [
+      {
+        "src": "/images/projects/massagejoy/two-images-1.png",
+        "alt": "Home page template"
+      },
+      {
+        "src": "/images/projects/massagejoy/two-images-2.png",
+        "alt": "Articles template"
+      }
+    ],
+    "threeImages": [
+      {
+        "src": "/images/projects/massagejoy/three-images-1.png",
+        "alt": "Mobile hero banner"
+      },
+      {
+        "src": "/images/projects/massagejoy/three-images-2.png",
+        "alt": "Mobile services"
+      },
+      {
+        "src": "/images/projects/massagejoy/three-images-3.png",
+        "alt": "Mobile services"
+      }
+    ],
+    "nextProject": "uppercut"
+  },
+  {
     "id": "uppercut",
     "title": "Uppercut",
     "text": "<p>January 2024 - Present<br/><strong>Freelance UI/UX Designer</strong></p><p>I am involved in the design process of various websites, with my current projects focusing on the energy and environment sector.</p><p>I am responsible for creating user-friendly, visually appealing and effective websites that communicate key messages about renewable energy, environmental conservation, and sustainability.</p>",

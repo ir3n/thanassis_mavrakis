@@ -2,6 +2,24 @@
   "title": "Work",
   "projects": [
     {
+      "id": "pawsandtails",
+      "image": {
+        "src": "/images/projects/pawsandtails-teaser.png",
+        "alt": "Paws & Tails"
+      },
+      "subtitle": "November 2024",
+      "title": "Paws & Tails"
+    },
+    {
+      "id": "massagejoy",
+      "image": {
+        "src": "/images/projects/massagejoy-teaser.png",
+        "alt": "Massage Joy"
+      },
+      "subtitle": "July 2024",
+      "title": "Massage Joy"
+    },
+    {
       "id": "uppercut",
       "image": {
         "src": "/images/projects/uppercut-teaser.png",
