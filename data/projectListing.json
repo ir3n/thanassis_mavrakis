@@ -2,6 +2,24 @@
   "title": "Work",
   "projects": [
     {
+      "id": "amazeluxury",
+      "image": {
+        "src": "/images/projects/amazeluxury-teaser.png",
+        "alt": "Amaze Luxury"
+      },
+      "subtitle": "April 2025",
+      "title": "Amaze Luxury"
+    },
+    {
+      "id": "idiokinisis",
+      "image": {
+        "src": "/images/projects/idiokinisis-teaser.png",
+        "alt": "Idiokinisis"
+      },
+      "subtitle": "March 2025",
+      "title": "Idiokinisis"
+    },
+    {
       "id": "pawsandtails",
       "image": {
         "src": "/images/projects/pawsandtails-teaser.png",
