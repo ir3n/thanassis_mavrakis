@@ -2,6 +2,15 @@
   "title": "Work",
   "projects": [
     {
+      "id": "cosmosis",
+      "image": {
+        "src": "/images/projects/cosmosis-teaser.png",
+        "alt": "Cosmosis"
+      },
+      "subtitle": "June 2025",
+      "title": "Cosmosis"
+    },
+    {
       "id": "amazeluxury",
       "image": {
         "src": "/images/projects/amazeluxury-teaser.png",

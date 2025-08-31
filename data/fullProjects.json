@@ -1,5 +1,43 @@
 [
   {
+    "id": "cosmosis",
+    "title": "Cosmosis",
+    "date": "June 2025",
+    "services": ["#UI/UX design", "#Web development"],
+    "banner": "/images/projects/cosmosis/banner.png",
+    "link": "https://www.cosmosishub.com/",
+    "text": "<p>Cosmosis is run by Konstantina Ntomprou, offering personalized coaching and workshops to help people grow both personally and professionally.</p><p>My goal was to keep things simple and modern, making it easy for visitors to understand what Cosmosis offers without feeling overwhelmed.</p><p>The design is calm and clean. I added some subtle animations to keep things engaging but still professional. The result is a website that feels approachable and trustworthy.</p><p>The website was co-designed with <a href='https://uppercutdesign.com/' target='_blank'>Uppercut Design</a></p>",
+    "halfImage": {
+      "src": "/images/projects/cosmosis/half-banner.png",
+      "alt": "Desktop hero banner"
+    },
+    "twoImages": [
+      {
+        "src": "/images/projects/cosmosis/two-images-1.png",
+        "alt": "About Cosmosis template"
+      },
+      {
+        "src": "/images/projects/cosmosis/two-images-2.png",
+        "alt": "About Konstantina template"
+      }
+    ],
+    "threeImages": [
+      {
+        "src": "/images/projects/cosmosis/three-images-1.png",
+        "alt": "Mobile hero banner"
+      },
+      {
+        "src": "/images/projects/cosmosis/three-images-2.png",
+        "alt": "Mobile why work with us"
+      },
+      {
+        "src": "/images/projects/cosmosis/three-images-3.png",
+        "alt": "Mobile services"
+      }
+    ],
+    "nextProject": "amazeluxury"
+  },
+  {
     "id": "amazeluxury",
     "title": "Amaze Luxury",
     "date": "April 2025",
@@ -217,6 +255,6 @@
       "src": "/images/projects/tastybrands/half-banner.png",
       "alt": "Tasty Brands"
     },
-    "nextProject": "idiokinisis"
+    "nextProject": "cosmosis"
   }
 ]
